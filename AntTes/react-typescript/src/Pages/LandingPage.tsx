@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { Container, Jumbotron, Row, Col, Alert } from 'reactstrap';
 import Navigation from '../Components/Navigation';
 import ATSpin from '../Components/ATSpin';
+import ATPic from '../Styles/Images/AnthonyTesoriero.png'
 {/*}
 import AuthTabs from '../Components/AuthTabs';
 import Footer from "../Components/Footer";
@@ -25,7 +26,7 @@ const LandingPage = () => {
                             <h3>"The Secret Incredient is Nothing"</h3>
                         </Col>
                         <Col>
-                        <ATSpin />
+                        <ATSpin image={ATPic}/>
                         </Col>
                     </Row>
                 </Container>
