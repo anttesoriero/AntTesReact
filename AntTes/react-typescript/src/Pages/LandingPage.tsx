@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Container, Jumbotron, Row, Col, Button } from 'reactstrap';
+import { Helmet } from 'react-helmet';
 import Navigation from '../Components/Navigation';
 import Footer from '../Components/Footer';
 import ATSpin from '../Components/ATSpin';
@@ -15,7 +16,7 @@ import CardCategories from '../Components/CardCategories'; */}
 const LandingPage = () => {
     return (
         <div>
-            <Navigation />
+            <Navigation pageName="Home"/>
             <Jumbotron className="LandingJumbo">
                 <Container>
                     <Row>
@@ -43,14 +44,15 @@ const LandingPage = () => {
                 <br />
 
                 {/* --= Resume =-- */}
-                <h1 className="centered">R&eacute;sum&eacute;</h1>
+                <h1 className="centered" id="resume">R&eacute;sum&eacute;</h1>
                 <span className="centered"><Button outline color="primary" href='../Styles/Documents/AnthonyTesorierosResume.pdf'>Open Full PDF</Button></span>
                 <h2 className="centered">
                     <a href="#education">Education</a>  {' '}-{' '}  
                     <a href="#experience">Experience</a>  {' '}-{' '} 
-                    <a href="#projects">Projects</a>
+                    <a href="#projects">Projects</a>  {' '}-{' '}  
+                    <a href="#skills">Skills</a>
                 </h2>
-
+                
                 {/* Education */}
                 <h4 id="education">Education</h4>
                 <hr />
@@ -255,6 +257,46 @@ const LandingPage = () => {
                         Built using AJAX, HTML, and CSS on the frontend, SQL and ubuntu on an Amazon Web Server on the backend. 
                         After threats are calculated, they are forked from the mitigation, and able to be seen by users on the website, similar to a GitHub for mitigations.
                     </p>
+                    </Col>
+                </Row>
+                <br />
+                
+                {/* Skills */}
+                <h4 id="skills">Skills</h4>
+                <hr />
+
+                {/* Languages & Frameworks */}
+                <h2>Languages & Frameworks</h2>
+                <br />
+                <Row>
+                    <Col xs="4">
+                        <h4 className="itemInfo">Expert - </h4>
+                        <ButtonLabels labelList={['Java', 'Python', 'HTML', 'CSS']} />
+                    </Col>
+                    <Col xs="4">
+                    <h4 className="itemInfo">Proficient - </h4>
+                        <ButtonLabels labelList={['React.js', 'JavaScript', 'Git', 'TypeScript']} />
+                    </Col>
+                    <Col xs="4">
+                        <h4 className="itemInfo">Familiar With - </h4>
+                        <ButtonLabels labelList={['PHP', 'Swift', 'C', 'Ada', 'Scheme', 'Prolog']} />
+                    </Col>
+                </Row>
+                <br />
+                
+                <Row>
+                    {/* Tools */}
+                    <Col xs="8">
+                        <h2>Tools</h2>
+                        <br />
+                        <ButtonLabels labelList={['Eclipse', 'IntelliJ', 'PyCharm', 'VSCode', 'PHPStorm', 'WebStorm', 'Xcode']} />
+                    </Col>
+
+                    {/* OS */}
+                    <Col xs="4">
+                        <h2>OS</h2>
+                        <br />
+                        <ButtonLabels labelList={['MacOS', 'Windows', 'Unix', 'Linux']} />
                     </Col>
                 </Row>
                 <br />
