@@ -1,3 +1,8 @@
+$theme-colors: (
+  "primary": #4281A4,
+  "danger":  #4281A4
+);
+
 .jumbotron {
     border-radius: 0 !important;
 }
@@ -27,3 +32,36 @@
     }
 }
 
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.align-right {
+    float: right;
+}
+
+.itemName {
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.itemInfo {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.itemTime {
+    font-weight: 400;
+}
+
+.itemList {
+    font-weight: 300;
+}
+
+.course {
+    a {
+        color: '#393c3d';
+    }
+}
