@@ -1,13 +1,13 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { Container, Jumbotron, Row, Col, Alert, Button } from 'reactstrap';
+import { Container, Jumbotron, Row, Col, Button } from 'reactstrap';
 import Navigation from '../Components/Navigation';
 import Footer from '../Components/Footer';
 import ATSpin from '../Components/ATSpin';
 import ButtonLabels from '../Components/ButtonLabels';
 import ATPic from '../Styles/Images/AnthonyTesoriero.png'
+{/*
 import RowanTorch from '../Styles/Images/RowanTorch.png'
-{/*}
 import AuthTabs from '../Components/AuthTabs';
 import Footer from "../Components/Footer";
 import CardCategories from '../Components/CardCategories'; */}
@@ -44,9 +44,10 @@ const LandingPage = () => {
 
                 {/* --= Resume =-- */}
                 <h1 className="centered">R&eacute;sum&eacute;</h1>
+                <span className="centered"><Button outline color="primary" href='../Styles/Documents/AnthonyTesorierosResume.pdf'>Open Full PDF</Button></span>
                 <h2 className="centered">
-                    <a href="#education">Education</a>  -  
-                    <a href="#experience">Experience</a>  - 
+                    <a href="#education">Education</a>  {' '}-{' '}  
+                    <a href="#experience">Experience</a>  {' '}-{' '} 
                     <a href="#projects">Projects</a>
                 </h2>
 
@@ -214,7 +215,7 @@ const LandingPage = () => {
                 <Row id="oddjobs">
                     <Col xs="8">
                         <h2>OddJobs - Web Application, <text className="itemName">Frontend</text></h2>
-                        <h4 className="itemInfo">Senior Project @ Rowan University</h4>
+                        <h4 className="itemInfo"><b>Senior Project</b> @ Rowan University</h4>
                     </Col>
                     <Col xs="4">
                         <h4 className="align-right itemTime">September - December 2020</h4>
@@ -239,7 +240,7 @@ const LandingPage = () => {
                 <Row id="mitigationsRepository">
                     <Col xs="8">
                         <h2>Mitigation's Repository, <text className="itemName">Agile Product Owner & Frontend</text></h2>
-                        <h4 className="itemInfo">Software Engineering @ Rowan University w/ Lockheed Martin</h4>
+                        <h4 className="itemInfo"><b>Software Engineering</b> @ Rowan University w/ Lockheed Martin</h4>
                     </Col>
                     <Col xs="4">
                         <h4 className="align-right itemTime">January - May 2020</h4>
