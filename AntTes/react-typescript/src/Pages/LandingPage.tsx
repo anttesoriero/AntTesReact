@@ -17,7 +17,7 @@ const LandingPage = () => {
                     <Row>
                         <Col>
                             <h1>Hi, I'm Anthony</h1>
-                            <h3>"The Secret Incredient is Nothing"</h3>
+                            <h3>"The Secret Ingredient is Nothing"</h3>
                         </Col>
                         <Col>
                         <ATSpin image={ATPic}/>
