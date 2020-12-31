@@ -13,28 +13,16 @@ const Navigation = (prop: {pageName: string}) => {
     return (
         <div>
             <Helmet>
-            <title>Anthony Tesoriero | {prop.pageName}</title>
+                <title>Anthony Tesoriero | {prop.pageName}</title>
             </Helmet>
-            <Navbar color="dark" dark expand="md">
-                <NavbarBrand href="/" className={'mx-auto brand'}>Anthony Tesoriero</NavbarBrand>
+            <Navbar color="dark" dark expand="md"  className="navstyle">
+                <NavbarBrand href="/" className={'mx-auto brand'} style={{fontSize: 30}}>Anthony Tesoriero</NavbarBrand>
                 <NavbarToggler onClick={toggleNav} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav navbar className="mr-auto">
                         {/*
                         <NavItem>
-                            <NavLink href="/tasks">Task Board</NavLink>
-                        </NavItem>
-                        {/*<NavItem>
-                            <NavLink href="/profile">Profile</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="/findtasks">Find a Task</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="/listtasks">List a Task</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="/survey">Surveys</NavLink>
+                            <NavLink href="/sample">Sample</NavLink>
                         </NavItem>
                         */}
                     </Nav>
