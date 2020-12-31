@@ -6,10 +6,6 @@ import { isNoSubstitutionTemplateLiteral } from 'typescript';
 import { IconContext } from 'react-icons'; */}
 
 const ButtonLabels = (prop: {labelList: string[]}) => {
-    const labels = prop.labelList;
-    for( var i = 0; i < labels.length; i++) {
-
-    }
     return (
         <div>
             {prop.labelList.map(labels => (

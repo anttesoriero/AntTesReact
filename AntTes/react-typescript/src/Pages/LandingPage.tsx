@@ -7,11 +7,6 @@ import Footer from '../Components/Footer';
 import ATSpin from '../Components/ATSpin';
 import ButtonLabels from '../Components/ButtonLabels';
 import ATPic from '../Styles/Images/AnthonyTesoriero.png'
-{/*
-import RowanTorch from '../Styles/Images/RowanTorch.png'
-import AuthTabs from '../Components/AuthTabs';
-import Footer from "../Components/Footer";
-import CardCategories from '../Components/CardCategories'; */}
 
 const LandingPage = () => {
     return (
