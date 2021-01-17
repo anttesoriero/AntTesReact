@@ -255,6 +255,30 @@ const LandingPage = () => {
                     </Col>
                 </Row>
                 <br />
+
+                {/* AntTes.com */}
+                <Row id="antTesWebsite">
+                    <Col xs="8">
+                        <h2>AntTes.com, <text className="itemName">Full-Stack</text></h2>
+                        <h4 className="itemInfo"><b>Personal Project</b> & Portfolio</h4>
+                    </Col>
+                    <Col xs="4">
+                        <h4 className="align-right itemTime">September 2015 - Present</h4>
+                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="http://AntTes.com">http://AntTes.com</a></h4>
+                    </Col>
+                </Row>
+                <ButtonLabels labelList={['HTML', 'CSS', 'PHP', 'Java', 'Python', 'JavaScript', 'React.js', 'TypeScript']} />
+                <Row>
+                    <Col xs="8">
+                    <p>
+                        Starting in 2015, this site was created as a personal project from scatch using HTML and CSS, with all styling and design done by hand. 
+                        It's original purpose was to test new skills learn in beginner coding classes, and to host original Java and Python projects. As time went on, the site changed 
+                        a lot, later using some Bootstrap styling, as well as a full design overhaul with minor JavaScript. Today, the site is is completely built using
+                        React.js and TypeScript, which was learned from the 4 month long <a href="#oddjobs">OddJobs Project</a> in 2020.
+                    </p>
+                    </Col>
+                </Row>
+                <br />
                 
                 {/* Skills */}
                 <h4 id="skills">Skills</h4>
