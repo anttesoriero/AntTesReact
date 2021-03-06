@@ -90,6 +90,8 @@ const LandingPage = () => {
                             <li><a href="#mitigationsRepository" style={{color: '#393c3d'}}>Software Engineering (Role: Agile Product Owner)</a></li>
                             <li>Graduate Advanced Robotics</li>
                             <li><a href="#oddjobs" style={{color: '#393c3d'}}>Senior Project - OddJobs</a></li>
+                            <li>Databases</li>
+                            <li>Human-Computer Interaction</li>
                             
                         </ul>
                     </Col>
