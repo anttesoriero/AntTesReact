@@ -1,14 +1,12 @@
-import React from 'react';
-import { Document } from 'react-pdf';
-// import resume from '../Styles/Documents/Anthony';
+import React, { useState } from 'react';
+ // import Pdf from 'react-typescript/src/Styles/Documents/AnthonyTesorieroResume.pdf';
 
 const Resume = () => {
-    return (
+
+    return (        
         <div>
-            <Document file="../Styles/Documents/AnthonyTesorieroResume.pdf" />
         </div>
     );
 }
-
 
 export default Resume;

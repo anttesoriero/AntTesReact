@@ -6,7 +6,7 @@ import Navigation from '../Components/Navigation';
 import Footer from '../Components/Footer';
 import ATSpin from '../Components/ATSpin';
 import ButtonLabels from '../Components/ButtonLabels';
-import ATPic from '../Styles/Images/AnthonyTesoriero.png'
+import ATPic from '../Styles/Images/AnthonyTesoriero.png';
 
 const LandingPage = () => {
     return (
@@ -40,7 +40,7 @@ const LandingPage = () => {
 
                 {/* --= Resume =-- */}
                 <h1 className="centered" id="resume">R&eacute;sum&eacute;</h1>
-                <span className="centered"><Button outline color="primary" href='../Styles/Documents/AnthonyTesorierosResume.pdf'>Open Full PDF</Button></span>
+                {/* <span className="centered"><Button outline color="primary" href='../../public/AnthonyTesorieroResume.pdf' download>Open Full PDF</Button></span> */}
                 <h2 className="centered">
                     <a href="#education">Education</a>  {' '}-{' '}  
                     <a href="#experience">Experience</a>  {' '}-{' '} 

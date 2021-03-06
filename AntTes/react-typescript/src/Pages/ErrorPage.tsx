@@ -32,9 +32,9 @@ const ErrorPage = () => {
                 <br/>
                 <br/>
 
-                <h2 className="centered">Not what you expected?</h2>
+                {/* <h2 className="centered">Not what you expected?</h2>
                 <br/>
-                <div className="centered"><Button href="/contact" outline color="info" size="lg">Contact</Button></div>
+                <div className="centered"><Button href="/contact" outline color="info" size="lg">Contact</Button></div> */}
 
                 <br/>
 
