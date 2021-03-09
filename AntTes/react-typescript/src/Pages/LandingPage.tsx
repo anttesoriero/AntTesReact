@@ -301,7 +301,7 @@ const LandingPage = () => {
                     </Col>
                     <Col xs="4">
                         <h4 className="itemInfo">Familiar With - </h4>
-                        <ButtonLabels labelList={['PHP', 'Swift', 'C', 'Ada', 'Scheme', 'Prolog']} />
+                        <ButtonLabels labelList={['MySQL', 'PHP', 'Swift', 'C', 'Ada', 'Scheme', 'Prolog']} />
                     </Col>
                 </Row>
                 <br />
@@ -311,7 +311,7 @@ const LandingPage = () => {
                     <Col xs="8">
                         <h2>Tools</h2>
                         <br />
-                        <ButtonLabels labelList={['Eclipse', 'IntelliJ', 'PyCharm', 'VSCode', 'PHPStorm', 'WebStorm', 'Xcode']} />
+                        <ButtonLabels labelList={['Eclipse', 'VSCode', 'IntelliJ', 'PyCharm', 'PHPStorm', 'WebStorm', 'Xcode']} />
                     </Col>
 
                     {/* OS */}

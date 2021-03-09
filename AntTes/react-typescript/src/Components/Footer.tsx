@@ -2,8 +2,9 @@ import React, { useContext, useState } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, UncontrolledDropdown,
     DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { withRouter } from 'react-router-dom';
-{/*import { MdPerson } from 'react-icons/md';
-import { IconContext } from 'react-icons'; */}
+import { MdPerson } from 'react-icons/md';
+import { IconContext } from 'react-icons';
+import { AiFillLinkedin, AiFillGithub, AiFillTwitterSquare, AiFillMail } from "react-icons/ai";
 
 const Footer = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -43,12 +44,12 @@ const Footer = () => {
                             </DropdownMenu>
                     </UncontrolledDropdown>  */}
                     <Nav>
-                        <NavLink style={linkStyle} href="mailTo:anttesoriero@gmail.com">Email</NavLink>
-                        <NavLink style={linkStyle} href="http://linkedin.com/in/anttesoriero" target="_blank">LinkedIn</NavLink>
-                        <NavLink style={linkStyle} href="http://github.com/anttesoriero" target="_blank">GitHub</NavLink>
-                        <NavLink style={linkStyle} href="http://twitter.com/anttesoriero" target="_blank">Twitter</NavLink>
-                        <NavLink style={linkStyle} href="./contact">Contact</NavLink>
-                        <NavLink style={linkStyle} href="./legal">Legal</NavLink>
+                        <NavLink style={linkStyle} href="mailTo:anttesoriero@gmail.com"><AiFillMail /> Email</NavLink>
+                        <NavLink style={linkStyle} href="http://linkedin.com/in/anttesoriero" target="_blank"><AiFillLinkedin /> LinkedIn</NavLink>
+                        <NavLink style={linkStyle} href="http://github.com/anttesoriero" target="_blank"><AiFillGithub /> GitHub</NavLink>
+                        <NavLink style={linkStyle} href="http://twitter.com/anttesoriero" target="_blank"><AiFillTwitterSquare /> Twitter</NavLink>
+                        {/* <NavLink style={linkStyle} href="./contact">Contact</NavLink>
+                        <NavLink style={linkStyle} href="./legal">Legal</NavLink> */}
                     </Nav>
                 </Collapse>
             </Navbar>

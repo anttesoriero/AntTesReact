@@ -41,7 +41,7 @@ const Navigation = (prop: {pageName: string}) => {
 
                                 <DropdownItem divider />
                                 
-                                <DropdownItem href="../Styles/Documents/AnthonyTesorierosResume.pdf'">
+                                <DropdownItem href="http://anttes.com/AnthonyTesorieroResume.pdf" target="_blank">
                                     Full R&eacute;sum&eacute; PDF
                                 </DropdownItem>
                             </DropdownMenu>

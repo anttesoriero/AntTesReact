@@ -1,9 +1,4 @@
-import React, { useContext, useState } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, UncontrolledDropdown,
-    DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-
-{/*import { MdPerson } from 'react-icons/md';
-import { IconContext } from 'react-icons'; */}
+import React from 'react';
 
 const ATSpin = (prop: {image: string}) => {
     return (
