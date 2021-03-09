@@ -14,7 +14,7 @@ const Footer = () => {
     return (
         <div className="footer">
             <Navbar color="dark" dark expand="md">
-                <NavbarBrand href="/" className={'mx-auto brand'}>&#169; 2020 Anthony Tesoriero</NavbarBrand>
+                <NavbarBrand href="/" className={'mx-auto brand'}>&#169; 2021 | Built by Anthony Tesoriero with React</NavbarBrand>
                 <NavbarToggler onClick={toggleNav} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav navbar className="mr-auto">
