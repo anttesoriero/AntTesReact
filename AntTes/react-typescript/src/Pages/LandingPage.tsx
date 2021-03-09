@@ -41,6 +41,7 @@ const LandingPage = () => {
                 {/* --= Resume =-- */}
                 <h1 className="centered" id="resume">R&eacute;sum&eacute;</h1>
                 {/* <span className="centered"><Button outline color="primary" href='../../public/AnthonyTesorieroResume.pdf' download>Open Full PDF</Button></span> */}
+                <span className="centered"><Button outline color="primary" target="_blank" href='http://anttes.com/AnthonyTesorieroResume.pdf'>Open Full PDF</Button></span>
                 <h2 className="centered">
                     <a href="#education">Education</a>  {' '}-{' '}  
                     <a href="#experience">Experience</a>  {' '}-{' '} 
