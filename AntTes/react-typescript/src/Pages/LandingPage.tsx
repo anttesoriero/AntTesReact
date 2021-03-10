@@ -244,7 +244,7 @@ const LandingPage = () => {
                     </Col>
                     <Col xs="4">
                         <h4 className="align-right itemTime">January - May 2020</h4>
-                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="https://anttes.com/oddjobs">https://AntTes.com/OddJobs</a></h4>
+                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="http://anttes.com/oddjobs">http://AntTes.com/OddJobs</a></h4>
                         {/* https://git.io/JUd9b */}
                     </Col>
                 </Row>
