@@ -11,7 +11,7 @@ const Oddjobs = () => {
 
     return (
         <div>
-            <Navigation pageName="Splash"/>
+            <Navigation pageName="Oddjobs"/>
 
             <Container>
                 
