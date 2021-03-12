@@ -44,10 +44,10 @@ const Footer = () => {
                             </DropdownMenu>
                     </UncontrolledDropdown>  */}
                     <Nav>
-                        <NavLink style={linkStyle} href="mailTo:anttesoriero@gmail.com"><AiFillMail /> Email</NavLink>
-                        <NavLink style={linkStyle} href="http://linkedin.com/in/anttesoriero" target="_blank"><AiFillLinkedin /> LinkedIn</NavLink>
-                        <NavLink style={linkStyle} href="http://github.com/anttesoriero" target="_blank"><AiFillGithub /> GitHub</NavLink>
-                        <NavLink style={linkStyle} href="http://twitter.com/anttesoriero" target="_blank"><AiFillTwitterSquare /> Twitter</NavLink>
+                        <NavLink style={linkStyle} href="mailTo:anttesoriero@gmail.com"><AiFillMail size="20px" className="iconStyle"/> Email</NavLink>
+                        <NavLink style={linkStyle} href="http://linkedin.com/in/anttesoriero" target="_blank"><AiFillLinkedin size="20px" className="iconStyle"/> LinkedIn</NavLink>
+                        <NavLink style={linkStyle} href="http://github.com/anttesoriero" target="_blank"><AiFillGithub size="20px" className="iconStyle"/> GitHub</NavLink>
+                        <NavLink style={linkStyle} href="http://twitter.com/anttesoriero" target="_blank"><AiFillTwitterSquare size="20px" className="iconStyle"/> Twitter</NavLink>
                         {/* <NavLink style={linkStyle} href="./contact">Contact</NavLink>
                         <NavLink style={linkStyle} href="./legal">Legal</NavLink> */}
                     </Nav>

@@ -7,6 +7,7 @@ import Footer from '../Components/Footer';
 import ATSpin from '../Components/ATSpin';
 import ButtonLabels from '../Components/ButtonLabels';
 import ATPic from '../Styles/Images/AnthonyTesoriero.png';
+import { AiFillGithub } from 'react-icons/ai';
 
 const LandingPage = () => {
     return (
@@ -219,7 +220,8 @@ const LandingPage = () => {
                     </Col>
                     <Col xs="4">
                         <h4 className="align-right itemTime">September - December 2020</h4>
-                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="https://git.io/JUd9W">https://git.io/JUd9W</a></h4>
+                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="http://anttes.com/oddjobs" target="_blank">http://AntTes.com/OddJobs</a></h4>
+                        {/* https://git.io/JUd9W */}
                     </Col>
                 </Row>
                 
@@ -232,6 +234,7 @@ const LandingPage = () => {
                         A service that connects people who need helps with tasks withy people who are interesting in earning extra income. 
                         Uses surveys to learn the user and collect useful data, to recommend tasks to list/complete, based on what they like.
                     </p>
+                    <p>* NOTE - OddJobs GitHub Repository is <u>private</u> due to API keys *</p>
                     </Col>
                 </Row>
                 <br />
@@ -244,8 +247,7 @@ const LandingPage = () => {
                     </Col>
                     <Col xs="4">
                         <h4 className="align-right itemTime">January - May 2020</h4>
-                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="http://anttes.com/oddjobs">http://AntTes.com/OddJobs</a></h4>
-                        {/* https://git.io/JUd9b */}
+                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="https://git.io/JUd9b" target="_blank">https://git.io/JUd9b</a></h4>
                     </Col>
                 </Row>
                 <ButtonLabels labelList={['HTML', 'CSS', 'AJAX', 'PHP', 'SQL', 'Ubuntu', 'MySQL', 'AWS']} />
@@ -282,6 +284,10 @@ const LandingPage = () => {
                     </p>
                     </Col>
                 </Row>
+                <br />
+
+                <div className="centered"><Button size="lg" href="https://github.com/anttesoriero" target="_blank"><AiFillGithub className="iconStyle" size="30px"/> Check out more on <b>GitHub</b></Button></div>
+
                 <br />
                 
                 {/* Skills */}

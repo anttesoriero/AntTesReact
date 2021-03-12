@@ -42,29 +42,29 @@ const Splash = () => {
                 {/* AT Tab */}
                 <h1><a href=""><span style={{color:"#4281A4"}}>_</span></a></h1>
 
-                <div className="centered"><Button size="lg" href="http://anttes.com"><IoGlobeOutline /> AntTes.com</Button></div>
+                <div className="centered"><Button size="lg" href="http://anttes.com"><IoGlobeOutline size="25px" className="iconStyle"/> AntTes.com</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="https://linkedin.com/in/anttesoriero"><AiFillLinkedin /> LinkedIn</Button></div>
+                <div className="centered"><Button size="lg" href="https://linkedin.com/in/anttesoriero"><AiFillLinkedin size="25px" className="iconStyle"/> LinkedIn</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="https://github.com/anttesoriero"><AiFillGithub /> GitHub</Button></div>
+                <div className="centered"><Button size="lg" href="https://github.com/anttesoriero"><AiFillGithub size="25px" className="iconStyle"/> GitHub</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="https://twitter.com/anttesoriero"><AiFillTwitterSquare /> Twitter</Button></div>
+                <div className="centered"><Button size="lg" href="https://twitter.com/anttesoriero"><AiFillTwitterSquare size="25px" className="iconStyle"/> Twitter</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="https://www.snapchat.com/add/anttesoriero"><SiSnapchat /> Snapchat</Button></div>
+                <div className="centered"><Button size="lg" href="https://www.snapchat.com/add/anttesoriero"><SiSnapchat size="25px" className="iconStyle"/> Snapchat</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="https://instagram.com/anttesoriero"><AiFillInstagram /> Instagram</Button></div>
+                <div className="centered"><Button size="lg" href="https://instagram.com/anttesoriero"><AiFillInstagram size="25px" className="iconStyle"/> Instagram</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="https://paypal.me/anttesoriero"><FaPaypal /> PayPal</Button></div>
+                <div className="centered"><Button size="lg" href="https://paypal.me/anttesoriero"><FaPaypal size="25px" className="iconStyle"/> PayPal</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="https://cash.app/$anttesoriero"><SiCashapp /> CashApp</Button></div>
+                <div className="centered"><Button size="lg" href="https://cash.app/$anttesoriero"><SiCashapp size="25px" className="iconStyle"/> CashApp</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="https://venmo.com/anttesoriero"><IoLogoVenmo /> Venmo</Button></div>
+                <div className="centered"><Button size="lg" href="https://venmo.com/anttesoriero"><IoLogoVenmo size="25px" className="iconStyle"/> Venmo</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="https://facebook.com/anttesoriero"><AiFillFacebook /> Facebook</Button></div>
+                <div className="centered"><Button size="lg" href="https://facebook.com/anttesoriero"><AiFillFacebook size="25px" className="iconStyle"/> Facebook</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="http://anttes.com/AnthonyTesorieroResume.pdf"><AiFillFilePdf /> Resume</Button></div>
+                <div className="centered"><Button size="lg" href="http://anttes.com/AnthonyTesorieroResume.pdf"><AiFillFilePdf size="25px" className="iconStyle"/> Resume</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="mailto:anttesoriero@gmail.com"><AiFillMail /> Contact</Button></div>
+                <div className="centered"><Button size="lg" href="mailto:anttesoriero@gmail.com"><AiFillMail size="25px" className="iconStyle"/> Contact</Button></div>
                 <br />
 
                 <br/>
