@@ -4,6 +4,7 @@ import LandingPage from './Pages/LandingPage';
 import ErrorPage from './Pages/ErrorPage';
 import Splash from './Pages/Splash';
 import Oddjobs from './Redirect/Oddjobs';
+import Contact from './Pages/Contact';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route exact={true} path="/error" render={(props) => <ErrorPage />} />
         <Route exact={true} path="/splash" render={(props) => <Splash />} />
         <Route exact={true} path="/oddjobs" render={(props) => <Oddjobs />} />
+        <Route exact={true} path="/contact" render={(props) => <Contact />} />
         <Redirect to="/error" />
       </Switch>
     </BrowserRouter>
