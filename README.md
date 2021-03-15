@@ -1,5 +1,5 @@
 # AntTes.com
-## Now made with React! ⚛
+### Now made with React! ⚛
 This is the GitHub Repository for Anthony Tesoriero's personal website
 
 Previously, my website was done fully by hand using HTML and CSS, with just a little PHP and some JS for testing.
