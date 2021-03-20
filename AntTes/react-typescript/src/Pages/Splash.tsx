@@ -32,7 +32,7 @@ const Splash = () => {
                             <h3>Here are some Useful Links</h3>
                         </Col>
                         <Col>
-                            <ATSpin image={ATPic}/>
+                            <ATSpin image={ATPic} size="200px"/>
                         </Col>
                     </Row>
                 </Container>

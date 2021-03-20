@@ -10,6 +10,8 @@ const Navigation = (prop: {pageName: string}) => {
     const [isOpen, setIsOpen] = useState(false);
     const toggleNav = () => setIsOpen(!isOpen);
 
+    const isMobile = window.innerWidth < 1000;
+
     return (
         <div>
             <Helmet>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { Container, Jumbotron, Row, Col, Button } from 'reactstrap';
+import { Container, Jumbotron, Row, Col, Button, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledButtonDropdown } from 'reactstrap';
 import { Helmet } from 'react-helmet';
 import Navigation from '../Components/Navigation';
 import Footer from '../Components/Footer';
@@ -10,9 +10,32 @@ import ATPic from '../Styles/Images/AnthonyTesoriero.png';
 import { AiFillGithub } from 'react-icons/ai';
 
 const LandingPage = () => {
+
+    const isMobile = window.innerWidth < 1000;
+
+    // -- Lists -- 
+    const expertList = ['Java', 'Python', 'HTML', 'CSS']
+    const proficientList = ['React.js', 'JavaScript', 'Git', 'TypeScript']
+    const familiarList = ['MySQL', 'PHP', 'Swift', 'C', 'Ada', 'Scheme', 'Prolog']
+    const toolsList = ['Eclipse', 'VSCode', 'IntelliJ', 'PyCharm', 'PHPStorm', 'WebStorm', 'Xcode']
+    const osList = ['MacOS', 'Windows', 'Unix', 'Linux']
+
     return (
         <div>
             <Navigation pageName="Home"/>
+            {isMobile
+            ?
+            <Jumbotron className="LandingJumbo">
+                <Container>
+                    <Row>
+                        <Col><h1>Hi, I'm Anthony</h1></Col>
+                        <Col><ATSpin image={ATPic} size="85px"/></Col>
+                    </Row>
+                    <h3>"The Secret Ingredient is Nothing"</h3>
+                    <br />
+                </Container>
+            </Jumbotron>
+            :
             <Jumbotron className="LandingJumbo">
                 <Container>
                     <Row>
@@ -20,12 +43,11 @@ const LandingPage = () => {
                             <h1>Hi, I'm Anthony</h1>
                             <h3>"The Secret Ingredient is Nothing"</h3>
                         </Col>
-                        <Col>
-                        <ATSpin image={ATPic}/>
-                        </Col>
+                        <Col><ATSpin image={ATPic} size="200px"/></Col>
                     </Row>
                 </Container>
             </Jumbotron>
+            }
             
             <Container>
                 {/* AT Tab */}
@@ -41,14 +63,33 @@ const LandingPage = () => {
 
                 {/* --= Resume =-- */}
                 <h1 className="centered" id="resume">R&eacute;sum&eacute;</h1>
-                {/* <span className="centered"><Button outline color="primary" href='../../public/AnthonyTesorieroResume.pdf' download>Open Full PDF</Button></span> */}
                 <span className="centered"><Button outline color="primary" target="_blank" href='http://anttes.com/AnthonyTesorieroResume.pdf'>Open Full PDF</Button></span>
+                <br />
+                {isMobile?
+                <span className="centered">
+                    <UncontrolledButtonDropdown>
+                        <DropdownToggle caret>Jump to Section</DropdownToggle>
+
+                        <DropdownMenu>
+                            <DropdownItem href="#education">🎓 Education</DropdownItem>
+                            <DropdownItem href="#experience">🔬 Experience</DropdownItem>
+                            <DropdownItem href="#projects">💻 Project</DropdownItem>
+                            <DropdownItem href="#skills">🛠 Skills</DropdownItem>
+                        </DropdownMenu>
+                    </UncontrolledButtonDropdown>
+                    <br />
+                </span>
+                
+                :
                 <h2 className="centered">
                     <a href="#education">Education</a>  {' '}-{' '}  
                     <a href="#experience">Experience</a>  {' '}-{' '} 
                     <a href="#projects">Projects</a>  {' '}-{' '}  
                     <a href="#skills">Skills</a>
                 </h2>
+                }
+
+                
                 
                 {/* Education */}
                 <h4 id="education">Education</h4>
@@ -297,37 +338,64 @@ const LandingPage = () => {
                 {/* Languages & Frameworks */}
                 <h2>Languages & Frameworks</h2>
                 <br />
-                <Row>
-                    <Col xs="4">
-                        <h4 className="itemInfo">Expert - </h4>
-                        <ButtonLabels labelList={['Java', 'Python', 'HTML', 'CSS']} />
-                    </Col>
-                    <Col xs="4">
-                    <h4 className="itemInfo">Proficient - </h4>
-                        <ButtonLabels labelList={['React.js', 'JavaScript', 'Git', 'TypeScript']} />
-                    </Col>
-                    <Col xs="4">
-                        <h4 className="itemInfo">Familiar With - </h4>
-                        <ButtonLabels labelList={['MySQL', 'PHP', 'Swift', 'C', 'Ada', 'Scheme', 'Prolog']} />
-                    </Col>
-                </Row>
-                <br />
-                
-                <Row>
+                {isMobile?
+                <div>
+                    <h4 className="itemInfo">Expert</h4>
+                    <ButtonLabels labelList={expertList} />
+                    <br />
+
+                    <h4 className="itemInfo">Proficient</h4>
+                    <ButtonLabels labelList={proficientList} />
+                    <br />
+
+                    <h4 className="itemInfo">Familiar With</h4>
+                    <ButtonLabels labelList={familiarList} />
+                    <br />
+
                     {/* Tools */}
-                    <Col xs="8">
-                        <h2>Tools</h2>
-                        <br />
-                        <ButtonLabels labelList={['Eclipse', 'VSCode', 'IntelliJ', 'PyCharm', 'PHPStorm', 'WebStorm', 'Xcode']} />
-                    </Col>
+                    <h2>Tools</h2>
+                    <ButtonLabels labelList={toolsList} />
+                    <br />
 
                     {/* OS */}
-                    <Col xs="4">
-                        <h2>OS</h2>
-                        <br />
-                        <ButtonLabels labelList={['MacOS', 'Windows', 'Unix', 'Linux']} />
-                    </Col>
-                </Row>
+                    <h2>OS</h2>
+                    <ButtonLabels labelList={osList} />
+                    <br />
+                </div>
+                :
+                <div>
+                    <Row>
+                        <Col xs="4">
+                            <h4 className="itemInfo">Expert - </h4>
+                            <ButtonLabels labelList={expertList} />
+                        </Col>
+                        <Col xs="4">
+                        <h4 className="itemInfo">Proficient - </h4>
+                            <ButtonLabels labelList={proficientList} />
+                        </Col>
+                        <Col xs="4">
+                            <h4 className="itemInfo">Familiar With - </h4>
+                            <ButtonLabels labelList={familiarList} />
+                        </Col>
+                    </Row>
+                    <br />
+                    <Row>
+                        {/* Tools */}
+                        <Col xs="8">
+                            <h2>Tools</h2>
+                            <br />
+                            <ButtonLabels labelList={toolsList} />
+                        </Col>
+
+                        {/* OS */}
+                        <Col xs="4">
+                            <h2>OS</h2>
+                            <br />
+                            <ButtonLabels labelList={osList} />
+                        </Col>
+                    </Row>
+                </div>
+                }
                 <br />
                 
             </Container>
