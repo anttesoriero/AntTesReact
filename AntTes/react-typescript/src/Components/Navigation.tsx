@@ -13,11 +13,6 @@ const Navigation = (prop: {pageName: string}) => {
 
     const isMobile = window.innerWidth < 1000;
 
-    // const toggleNav = () => {
-    //     setIsOpen(!isOpen);
-    //     console.log(isOpen)
-    // };
-
     return (
         <div>
             <Helmet>
