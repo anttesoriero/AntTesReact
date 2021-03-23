@@ -261,7 +261,7 @@ const LandingPage = () => {
                     </Col>
                     <Col xs="4">
                         <h4 className="align-right itemTime">September - December 2020</h4>
-                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="http://anttes.com/oddjobs" target="_blank">http://AntTes.com/OddJobs</a></h4>
+                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="http://anttes.com/oddjobs" target="_blank">AntTes.com/OddJobs</a></h4>
                         {/* https://git.io/JUd9W */}
                     </Col>
                 </Row>
@@ -296,7 +296,8 @@ const LandingPage = () => {
                     </Col>
                     <Col xs="4">
                         <h4 className="align-right itemTime">January - May 2020</h4>
-                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="https://git.io/JUd9b" target="_blank">https://git.io/JUd9b</a></h4>
+                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="http://anttes.com/mitigations" target="_blank">AntTes.com/Mitigations</a></h4>
+                        {/* https://git.io/JUd9b */}
                     </Col>
                 </Row>
                 <ButtonLabels labelList={['HTML', 'CSS', 'AJAX', 'PHP', 'SQL', 'Ubuntu', 'MySQL', 'AWS']} />
@@ -319,7 +320,7 @@ const LandingPage = () => {
                     </Col>
                     <Col xs="4">
                         <h4 className="align-right itemTime">September 2015 - Present</h4>
-                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="http://AntTes.com">http://AntTes.com</a></h4>
+                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="http://AntTes.com">AntTes.com</a></h4>
                     </Col>
                 </Row>
                 <ButtonLabels labelList={['HTML', 'CSS', 'PHP', 'Java', 'Python', 'JavaScript', 'React.js', 'TypeScript']} />
