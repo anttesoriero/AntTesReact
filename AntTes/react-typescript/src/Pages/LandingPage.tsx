@@ -1,13 +1,13 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { Container, Jumbotron, Row, Col, Button, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledButtonDropdown } from 'reactstrap';
+import { Container, Jumbotron, Row, Col, Button, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledButtonDropdown, Carousel } from 'reactstrap';
 import { Helmet } from 'react-helmet';
 import Navigation from '../Components/Navigation';
 import Footer from '../Components/Footer';
 import ATSpin from '../Components/ATSpin';
 import ButtonLabels from '../Components/ButtonLabels';
 import ATPic from '../Styles/Images/AnthonyTesoriero.png';
-import { AiFillGithub } from 'react-icons/ai';
+import { AiFillGithub, AiFillYoutube } from 'react-icons/ai';
 
 const LandingPage = () => {
 
@@ -266,7 +266,14 @@ const LandingPage = () => {
                     </Col>
                 </Row>
                 
-                <ButtonLabels labelList={['HTML', 'CSS', 'React.js', 'TypeScript', 'Python', 'Flask', 'MySQL', 'AWS']} />
+                <Row>
+                    <Col><ButtonLabels labelList={['HTML', 'CSS', 'React.js', 'TypeScript', 'Python', 'Flask', 'MySQL', 'AWS']} /></Col>
+                    <Col xs="4"><div className="align-right itemTime">
+                        <Button className="centered" color="danger" href="https://youtu.be/bv3de-OYx8I" target="_blank">
+                            <AiFillYoutube className="iconStyle" size="30px"/> OddJobs Video
+                        </Button>
+                    </div></Col>
+                </Row>
 
                 <Row>
                     <Col xs="8">
@@ -278,6 +285,7 @@ const LandingPage = () => {
                     <p>* NOTE - OddJobs GitHub Repository is <u>private</u> due to API keys *</p>
                     </Col>
                 </Row>
+
                 <br />
 
                 {/* Mitigation's Repository */}
