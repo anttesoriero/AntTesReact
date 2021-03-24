@@ -1,9 +1,5 @@
-import React, { useContext, useState } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, UncontrolledDropdown,
-    DropdownToggle, DropdownMenu, DropdownItem, Col, Row } from 'reactstrap';
-import { withRouter } from 'react-router-dom';
-import { MdPerson } from 'react-icons/md';
-import { IconContext } from 'react-icons';
+import React, { useState } from 'react';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavLink, Col, Row } from 'reactstrap';
 import { AiFillLinkedin, AiFillGithub, AiFillTwitterSquare, AiFillMail } from "react-icons/ai";
 
 const Footer = () => {

@@ -11,13 +11,13 @@ import { IoGlobeOutline, IoLogoVenmo } from "react-icons/io5";
 
 const Splash = () => {
 
-    const socialList = [
-        { text: {IoGlobeOutline} + " Anttes.com", icon: {IoGlobeOutline}, web: "http://anttes.com" },
-        { text: <AiFillLinkedin /> + " LinkedIn", icon: {IoGlobeOutline}, web: "https://linkedin.com/in/anttesoriero" }, 
-        { text: <AiFillGithub /> + " GitHub", icon: {IoGlobeOutline}, web: "https://github.com/anttesoriero" }, 
-        { text: <AiFillTwitterSquare /> + " Twitter", icon: {IoGlobeOutline}, web: "https://twitter.com/anttesoriero" }, 
-        { text: <SiSnapchat /> + " Snapchat", icon: {IoGlobeOutline}, web: "https://www.snapchat.com/add/anttesoriero" }, 
-    ]
+    // const socialList = [
+    //     { text: {IoGlobeOutline} + " Anttes.com", icon: {IoGlobeOutline}, web: "http://anttes.com" },
+    //     { text: <AiFillLinkedin /> + " LinkedIn", icon: {IoGlobeOutline}, web: "https://linkedin.com/in/anttesoriero" }, 
+    //     { text: <AiFillGithub /> + " GitHub", icon: {IoGlobeOutline}, web: "https://github.com/anttesoriero" }, 
+    //     { text: <AiFillTwitterSquare /> + " Twitter", icon: {IoGlobeOutline}, web: "https://twitter.com/anttesoriero" }, 
+    //     { text: <SiSnapchat /> + " Snapchat", icon: {IoGlobeOutline}, web: "https://www.snapchat.com/add/anttesoriero" }, 
+    // ]
 
     const iconSize = "50px"
 
@@ -48,7 +48,7 @@ const Splash = () => {
             
             <Container>
                 {/* AT Tab */}
-                <h1><a href=""><span style={{color:"#4281A4"}}>_</span></a></h1>
+                <h1><span style={{color:"#4281A4"}}>_</span></h1>
 
                 <div className="centered"><Button className="splashButton" href="http://anttes.com"><IoGlobeOutline size={iconSize} className="splashIconStyle"/> AntTes.com</Button></div>
                 <br />

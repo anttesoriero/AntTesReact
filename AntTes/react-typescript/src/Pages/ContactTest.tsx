@@ -3,9 +3,9 @@ import Navigation from '../Components/Navigation';
 import {Button, Col, Container, Form, FormGroup, Input, Label, Row} from 'reactstrap';
 import Footer from '../Components/Footer';
 import {FiSend} from 'react-icons/fi'
-import emailjs, { init } from 'emailjs-com';
-import { useForm } from 'react-hook-form';
-init('../../process.env/REACT_APP_EMAILJS_USER_ID');
+// import emailjs, { init } from 'emailjs-com';
+// import { useForm } from 'react-hook-form';
+// init('../../process.env/REACT_APP_EMAILJS_USER_ID');
 
 const ContactTest = () => {
     // const { register, errors, handleSubmit, reset } = useForm();

@@ -5,6 +5,12 @@ import ErrorImage from "../Styles/Images/SurprisedOtterError.png"
 import Footer from '../Components/Footer';
 
 const ErrorPage = () => {
+
+    function goBack() {
+        window.history.go(-1);
+        // javascript:history.go(-1)
+    }
+
     return (
         <div>
             <Navigation pageName="404: Page not Found"/>
@@ -24,7 +30,7 @@ const ErrorPage = () => {
 
                 <Row>
                     <Col><hr/></Col>
-                    <Col className="centered"><Button href="javascript:history.go(-1)" color="secondary" size="lg">Go Back</Button></Col>
+                    <Col className="centered"><Button onClick={goBack} color="secondary" size="lg">Go Back</Button></Col>
                     <Col className="centered"><Button href="/" color="info" size="lg">Go Home</Button></Col>
                     <Col><hr/></Col>
                 </Row>

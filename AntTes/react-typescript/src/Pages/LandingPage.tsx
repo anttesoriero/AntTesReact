@@ -1,7 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { Container, Jumbotron, Row, Col, Button, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledButtonDropdown, Carousel } from 'reactstrap';
-import { Helmet } from 'react-helmet';
+import { Container, Jumbotron, Row, Col, Button, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledButtonDropdown } from 'reactstrap';
 import Navigation from '../Components/Navigation';
 import Footer from '../Components/Footer';
 import ATSpin from '../Components/ATSpin';
@@ -51,7 +50,7 @@ const LandingPage = () => {
             
             <Container>
                 {/* AT Tab */}
-                <h1><a href="/eats"><span style={{color:"#4281A4"}}>_</span></a></h1>
+                <h1><span style={{color:"#4281A4"}}>_</span></h1>
 
                 {/* Description */}
                 <h2>
@@ -261,7 +260,7 @@ const LandingPage = () => {
                     </Col>
                     <Col xs="4">
                         <h4 className="align-right itemTime">September - December 2020</h4>
-                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="http://anttes.com/oddjobs" target="_blank">AntTes.com/OddJobs</a></h4>
+                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="http://anttes.com/oddjobs" target="_blank" rel="noreferrer">AntTes.com/OddJobs</a></h4>
                         {/* https://git.io/JUd9W */}
                     </Col>
                 </Row>
@@ -296,7 +295,7 @@ const LandingPage = () => {
                     </Col>
                     <Col xs="4">
                         <h4 className="align-right itemTime">January - May 2020</h4>
-                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="http://anttes.com/mitigations" target="_blank">AntTes.com/Mitigations</a></h4>
+                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="http://anttes.com/mitigations" target="_blank" rel="noreferrer">AntTes.com/Mitigations</a></h4>
                         {/* https://git.io/JUd9b */}
                     </Col>
                 </Row>

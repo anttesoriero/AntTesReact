@@ -1,11 +1,8 @@
-import React, { useContext, useState } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, UncontrolledDropdown,
+import React, { useState } from 'react';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, UncontrolledDropdown,
     DropdownToggle, DropdownMenu, DropdownItem, UncontrolledCollapse, ListGroup, ListGroupItem } from 'reactstrap';
-import { withRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import {GiHamburgerMenu} from 'react-icons/gi'
-{/*import { MdPerson } from 'react-icons/md';
-import { IconContext } from 'react-icons'; */}
+import { GiHamburgerMenu } from 'react-icons/gi'
 
 const Navigation = (prop: {pageName: string}) => {
     const [isOpen, setIsOpen] = useState(false);
