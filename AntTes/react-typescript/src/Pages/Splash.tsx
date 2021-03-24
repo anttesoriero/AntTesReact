@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from '../Components/Navigation';
-import {Container, Row, Col, Button, Media, Jumbotron, ButtonGroup} from 'reactstrap';
+import {Container, Row, Col, Button, Jumbotron} from 'reactstrap';
 import Footer from '../Components/Footer';
 import ATSpin from '../Components/ATSpin';
 import ATPic from '../Styles/Images/AnthonyTesoriero.png';
@@ -8,8 +8,6 @@ import { AiFillLinkedin, AiFillGithub, AiFillTwitterSquare, AiFillMail, AiFillFa
 import { SiCashapp, SiSnapchat } from "react-icons/si";
 import { FaPaypal } from "react-icons/fa";
 import { IoGlobeOutline, IoLogoVenmo } from "react-icons/io5";
-import ButtonSocial from '../Components/ButtonSocial';
-import AntTesIcon from '../Styles/Images/AntTesIcon.png';
 
 const Splash = () => {
 
@@ -20,6 +18,16 @@ const Splash = () => {
         { text: <AiFillTwitterSquare /> + " Twitter", icon: {IoGlobeOutline}, web: "https://twitter.com/anttesoriero" }, 
         { text: <SiSnapchat /> + " Snapchat", icon: {IoGlobeOutline}, web: "https://www.snapchat.com/add/anttesoriero" }, 
     ]
+
+    const iconSize = "50px"
+
+    // color: #FFFFFF;
+    // width: 500px;
+    // font-size: 35px;
+    // /* z-index: -1; */
+
+    // const Icons = [IoGlobeOutline]
+
 
     return (
         <div>
@@ -42,39 +50,39 @@ const Splash = () => {
                 {/* AT Tab */}
                 <h1><a href=""><span style={{color:"#4281A4"}}>_</span></a></h1>
 
-                <div className="centered"><Button size="lg" href="http://anttes.com"><IoGlobeOutline size="25px" className="iconStyle"/> AntTes.com</Button></div>
+                <div className="centered"><Button className="splashButton" href="http://anttes.com"><IoGlobeOutline size={iconSize} className="splashIconStyle"/> AntTes.com</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="https://linkedin.com/in/anttesoriero"><AiFillLinkedin size="25px" className="iconStyle"/> LinkedIn</Button></div>
+                <div className="centered"><Button className="splashButton" href="https://linkedin.com/in/anttesoriero"><AiFillLinkedin size={iconSize} className="splashIconStyle"/> LinkedIn</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="https://github.com/anttesoriero"><AiFillGithub size="25px" className="iconStyle"/> GitHub</Button></div>
+                <div className="centered"><Button className="splashButton" href="https://github.com/anttesoriero"><AiFillGithub size={iconSize} className="splashIconStyle"/> GitHub</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="https://twitter.com/anttesoriero"><AiFillTwitterSquare size="25px" className="iconStyle"/> Twitter</Button></div>
+                <div className="centered"><Button className="splashButton" href="https://twitter.com/anttesoriero"><AiFillTwitterSquare size={iconSize} className="splashIconStyle"/> Twitter</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="https://www.snapchat.com/add/anttesoriero"><SiSnapchat size="25px" className="iconStyle"/> Snapchat</Button></div>
+                <div className="centered"><Button className="splashButton" href="https://www.snapchat.com/add/anttesoriero"><SiSnapchat size={iconSize} className="splashIconStyle"/> Snapchat</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="https://instagram.com/anttesoriero"><AiFillInstagram size="25px" className="iconStyle"/> Instagram</Button></div>
+                <div className="centered"><Button className="splashButton" href="https://instagram.com/anttesoriero"><AiFillInstagram size={iconSize} className="splashIconStyle"/> Instagram</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="https://paypal.me/anttesoriero"><FaPaypal size="25px" className="iconStyle"/> PayPal</Button></div>
+                <div className="centered"><Button className="splashButton" href="https://paypal.me/anttesoriero"><FaPaypal size={iconSize} className="splashIconStyle"/> PayPal</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="https://cash.app/$anttesoriero"><SiCashapp size="25px" className="iconStyle"/> CashApp</Button></div>
+                <div className="centered"><Button className="splashButton" href="https://cash.app/$anttesoriero"><SiCashapp size={iconSize} className="splashIconStyle"/> CashApp</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="https://venmo.com/anttesoriero"><IoLogoVenmo size="25px" className="iconStyle"/> Venmo</Button></div>
+                <div className="centered"><Button className="splashButton" href="https://venmo.com/anttesoriero"><IoLogoVenmo size={iconSize} className="splashIconStyle"/> Venmo</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="https://facebook.com/anttesoriero"><AiFillFacebook size="25px" className="iconStyle"/> Facebook</Button></div>
+                <div className="centered"><Button className="splashButton" href="https://facebook.com/anttesoriero"><AiFillFacebook size={iconSize} className="splashIconStyle"/> Facebook</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="http://anttes.com/AnthonyTesorieroResume.pdf"><AiFillFilePdf size="25px" className="iconStyle"/> Resume</Button></div>
+                <div className="centered"><Button className="splashButton" href="http://anttes.com/AnthonyTesorieroResume.pdf"><AiFillFilePdf size={iconSize} className="splashIconStyle"/> Resume</Button></div>
                 <br />
-                <div className="centered"><Button size="lg" href="mailto:anttesoriero@gmail.com"><AiFillMail size="25px" className="iconStyle"/> Contact</Button></div>
+                <div className="centered"><Button className="splashButton" href="mailto:anttesoriero@gmail.com"><AiFillMail size={iconSize} className="splashIconStyle"/> Contact</Button></div>
                 <br />
 
                 <br/>
 
-                {/* <ButtonSocial labelList={socialList} /> */}
+                {/* <Button className="splashButton"Social labelList={socialList} /> */}
 
                 <br />
 
                 {/* {socialList.map((social: { text: any; icon: any; web: any; }) => (
-                    <span><Button size="lg" href={social.web}>{social.icon} {social.text}</Button>{' '}</span>
+                    <span><Button className="splashButton" size="lg" href={social.web}>{social.icon} {social.text}</Button>{' '}</span>
                 ))} */}
 
             </Container>
