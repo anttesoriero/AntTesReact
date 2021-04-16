@@ -76,7 +76,7 @@ const Splash = () => {
                         <Row>
                             <Col>
                                 <h1>Hi, I'm Anthony</h1>
-                                <h3>"The Secret Ingredient is Nothing"</h3>
+                                <h3>Here are some useful links</h3>
                             </Col>
                             <Col><ATSpin image={ATPic} size="200px"/></Col>
                         </Row>
