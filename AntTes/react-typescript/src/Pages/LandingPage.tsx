@@ -19,6 +19,65 @@ const LandingPage = () => {
     const toolsList = ['Eclipse', 'VSCode', 'IntelliJ', 'PyCharm', 'PHPStorm', 'WebStorm', 'Xcode']
     const osList = ['MacOS', 'Windows', 'Unix', 'Linux']
 
+    // -- Lists for consistent data
+    // - Education
+    const rowan = {
+        title: ["Rowan University", "Glassboro, NJ"],
+        itemInfo: [
+            "BS in Computer Science, Artificial Intelligence Concentration",
+            "Minor in Mathematics"
+        ],
+        date: "September 2017 - May 2021"
+    }
+
+    const rhs = {
+        title: ["Ridgewood High School", "Ridgewood, NJ"],
+        itemInfo: ["High School Diploma"],
+        date: "September 2013 - June 2017"
+    }
+
+    // - Experience
+    const robRes = {
+        title: "Robotics Researcher",
+        itemInfo: "Department of Computer Science, Rowan University, Glassboro, NJ",
+        date: "January 2019 - Present"
+    }
+
+    const csLA = {
+        title: "CS Learning Assistant",
+        itemInfo: "Department of Computer Science, Rowan University, Glassboro, NJ",
+        date: "January 2019 - September 2020"
+    }
+
+    const robAss = {
+        title: "Robotics Assistant",
+        itemInfo: "Department of Computer Science, Rowan University, Glassboro, NJ",
+        date: "September 2018 - January 2019"
+    }
+
+    // - Projects
+    const oddJobs = {
+        title: ["OddJobs - Web Application", "Frontend"],
+        itemInfo: ["Senior Project", "@ Rowan University"],
+        link: ["AntTes.com/OddJobs", "http://anttes.com/oddjobs"],
+        date: "September - December 2020"
+    }
+
+    const mitRep = {
+        title: ["Mitigation's Repository", "Agile Product Owner & Frontend"],
+        itemInfo: ["Senior Engineering", "@ Rowan University w/ Lockheed Martin"],
+        link: ["AntTes.com/Mitigations", "http://anttes.com/mitigations"],
+        date: "January - May 2020"
+    }
+
+    const anttes = {
+        title: ["AntTes.com", "Full-Stack"],
+        itemInfo: ["Personal Project", "& Portfolio"],
+        link: ["AntTes.com", "http://anttes.com"],
+        date: "September 2015 - Present"
+    }
+
+
     return (
         <div className="App">
             <Navigation pageName="Home"/>
@@ -94,23 +153,27 @@ const LandingPage = () => {
                 <h4 id="education">Education</h4>
                 <hr />
 
-                {/* Logo
-                <div className="grayScale">
-                    <a href="http://rowan.edu" target="_blank">
-                        <img className="icon" src={RowanTorch} alt="Avatar" width="50px" style={{textAlign:'left'}} />
-                    </a>
-                </div>
-                */}
                 {/* Rowan */}
-                <Row>
-                    <Col xs="8">
-                        <h2>Rowan University, <text className="itemName">Glassboro, NJ</text></h2>
-                        <h4 className="itemInfo">B.S. in Computer Science, Artificial Intelligence Concentration</h4>
-                        <h4 className="itemInfo">Minor in Mathematics</h4>
+                {isMobile? 
+                    <div>
+                        <h2>{rowan.title[0]} <text className="itemName">{rowan.title[1]}</text></h2>
+                        <h4 className="itemInfo">{rowan.itemInfo[0]}</h4>
+                        <h4 className="itemInfo">{rowan.itemInfo[1]}</h4>
+                        <h4 className="itemTime">{rowan.date}</h4>
+                    </div>
+                :
+                    <Row>
+                        <Col xs="8">
+                            <h2>{rowan.title[0]} <text className="itemName">{rowan.title[1]}</text></h2>
+                            <h4 className="itemInfo">{rowan.itemInfo[0]}</h4>
+                            <h4 className="itemInfo">{rowan.itemInfo[1]}</h4>
 
-                    </Col>
-                    <Col xs="4"><h4 className="align-right itemTime">anticipated May 2021</h4></Col>
-                </Row>
+                        </Col>
+                        <Col xs="4"><h4 className="align-right itemTime">{rowan.date}</h4></Col>
+                    </Row>
+                }
+                
+
                 <br />
                 <Row>
                     <Col xs="6">
@@ -154,13 +217,22 @@ const LandingPage = () => {
                 <br />
 
                 {/* RHS */}
-                <Row>
-                    <Col xs="8">
-                        <h2>Ridgewood High School, <text className="itemName">Ridgewood, NJ</text></h2>
-                        <h4 className="itemInfo">High School Diploma</h4>
-                    </Col>
-                    <Col xs="4"><h4 className="align-right itemTime">September 2013 - June 2017</h4></Col>
-                </Row>
+                {isMobile? 
+                    <div>
+                        <h2>{rhs.title[0]} <text className="itemName">{rhs.title[1]}</text></h2>
+                        <h4 className="itemInfo">{rhs.itemInfo[0]}</h4>
+                        <h4 className="itemTime">{rhs.date}</h4>
+                    </div>
+                :
+                    <Row>
+                        <Col xs="8">
+                            <h2>{rhs.title[0]} <text className="itemName">{rhs.title[1]}</text></h2>
+                            <h4 className="itemInfo">{rhs.itemInfo[0]}</h4>
+                        </Col>
+                        <Col xs="4"><h4 className="align-right itemTime">{rhs.date}</h4></Col>
+                    </Row>
+                }
+
                 <br />
                 <Row>
                     <Col xs="6">
@@ -189,13 +261,22 @@ const LandingPage = () => {
                 <hr />
                 
                 {/* Robotics Research */}
-                <Row>
-                    <Col xs="8">
-                        <h2>Robotics Researcher</h2>
-                        <h4 className="itemInfo">Department of Computer Science, Rowan University, Glassboro, NJ</h4>
-                    </Col>
-                    <Col xs="4"><h4 className="align-right itemTime">January 2019 - Present</h4></Col>
-                </Row>
+                {isMobile? 
+                    <div>
+                        <h2>{robRes.title}</h2>
+                        <h4 className="itemInfo">{robRes.itemInfo}</h4>
+                        <h4 className="itemTime">{robRes.date}</h4>
+                    </div>
+                :
+                    <Row>
+                        <Col xs="8">
+                            <h2>{robRes.title}</h2>
+                            <h4 className="itemInfo">{robRes.itemInfo}</h4>
+                        </Col>
+                        <Col xs="4"><h4 className="align-right itemTime">{robRes.date}</h4></Col>
+                    </Row>
+                }
+
                 <ButtonLabels labelList={['Python', 'LEGO EV3 MicroPython', 'LEGO ev3dev']} />
                 <Row>
                     <Col xs="8">
@@ -209,13 +290,22 @@ const LandingPage = () => {
                 <br />
 
                 {/* Learning Assistant */}
-                <Row>
-                    <Col xs="8">
-                        <h2>CS Learning Asistant</h2>
-                        <h4 className="itemInfo">Department of Computer Science, Rowan University, Glassboro, NJ</h4>
-                    </Col>
-                    <Col xs="4"><h4 className="align-right itemTime">January 2019 - September 2020</h4></Col>
-                </Row>
+                {isMobile? 
+                    <div>
+                        <h2>{csLA.title}</h2>
+                        <h4 className="itemInfo">{csLA.itemInfo}</h4>
+                        <h4 className="itemTime">{csLA.date}</h4>
+                    </div>
+                :
+                    <Row>
+                        <Col xs="8">
+                            <h2>{csLA.title}</h2>
+                            <h4 className="itemInfo">{csLA.itemInfo}</h4>
+                        </Col>
+                        <Col xs="4"><h4 className="align-right itemTime">{csLA.date}</h4></Col>
+                    </Row>
+                }
+
                 <ButtonLabels labelList={['Java', 'Python', 'LEGO EV3 MicroPython']} />
                 <Row>
                     <Col xs="8">
@@ -229,13 +319,22 @@ const LandingPage = () => {
                 <br />
 
                 {/* Robotics Assistant */}
-                <Row>
-                    <Col xs="8">
-                        <h2>Robotics Assistant</h2>
-                        <h4 className="itemInfo">Department of Computer Science, Rowan University, Glassboro, NJ</h4>
-                    </Col>
-                    <Col xs="4"><h4 className="align-right itemTime">September 2018 - January 2019</h4></Col>
-                </Row>
+                {isMobile? 
+                    <div>
+                        <h2>{robAss.title}</h2>
+                        <h4 className="itemInfo">{robAss.itemInfo}</h4>
+                        <h4 className="itemTime">{robAss.date}</h4>
+                    </div>
+                :
+                    <Row>
+                        <Col xs="8">
+                            <h2>{robAss.title}</h2>
+                            <h4 className="itemInfo">{robAss.itemInfo}</h4>
+                        </Col>
+                        <Col xs="4"><h4 className="align-right itemTime">{robAss.date}</h4></Col>
+                    </Row>
+                }
+
                 <br />
                 <Row>
                     <Col xs="8">
@@ -253,27 +352,28 @@ const LandingPage = () => {
                 <hr />
 
                 {/* OddJobs */}
+                {isMobile? 
+                    <div>
+                        <h2>{oddJobs.title[0]} <text className="itemName">{oddJobs.title[1]}</text></h2>
+                        <h4 className="itemInfo"><b>{oddJobs.itemInfo[0]}</b> {oddJobs.itemInfo[1]}</h4>
+                        <h4 className="itemTime">{oddJobs.date}</h4>
+                        <h4 className="itemTime"><a style={{color: '#393c3d'}} href={oddJobs.link[1]} target="_blank" rel="noreferrer">{oddJobs.link[0]}</a></h4>
+                    </div>
+                :
                 <Row id="oddjobs">
                     <Col xs="8">
-                        <h2>OddJobs - Web Application, <text className="itemName">Frontend</text></h2>
-                        <h4 className="itemInfo"><b>Senior Project</b> @ Rowan University</h4>
+                    <h2>{oddJobs.title[0]} <text className="itemName">{oddJobs.title[1]}</text></h2>
+                        <h4 className="itemInfo"><b>{oddJobs.itemInfo[0]}</b> {oddJobs.itemInfo[1]}</h4>
                     </Col>
                     <Col xs="4">
-                        <h4 className="align-right itemTime">September - December 2020</h4>
-                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="http://anttes.com/oddjobs" target="_blank" rel="noreferrer">AntTes.com/OddJobs</a></h4>
+                        <h4 className="align-right itemTime">{oddJobs.date}</h4>
+                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href={oddJobs.link[1]} target="_blank" rel="noreferrer">{oddJobs.link[0]}</a></h4>
                         {/* https://git.io/JUd9W */}
                     </Col>
                 </Row>
+                }
                 
-                <Row>
-                    <Col><ButtonLabels labelList={['HTML', 'CSS', 'React.js', 'TypeScript', 'Python', 'Flask', 'MySQL', 'AWS']} /></Col>
-                    <Col xs="4"><div className="align-right itemTime">
-                        <Button className="centered" color="danger" href="https://youtu.be/bv3de-OYx8I" target="_blank">
-                            <AiFillYoutube className="iconStyle" size="30px"/> OddJobs Video
-                        </Button>
-                    </div></Col>
-                </Row>
-
+                <ButtonLabels labelList={['HTML', 'CSS', 'React.js', 'TypeScript', 'Python', 'Flask', 'MySQL', 'AWS']} />
                 <Row>
                     <Col xs="8">
                     <p>
@@ -282,23 +382,39 @@ const LandingPage = () => {
                         Uses surveys to learn the user and collect useful data, to recommend tasks to list/complete, based on what they like.
                     </p>
                     <p>* NOTE - OddJobs GitHub Repository is <u>private</u> due to API keys *</p>
+                    
+                    <div className="itemTime" style={{width: 200}}>
+                        <Button className="centered" color="danger" href="https://youtu.be/bv3de-OYx8I" target="_blank">
+                            <AiFillYoutube className="iconStyle" size="30px"/> OddJobs Video
+                        </Button>
+                    </div>
                     </Col>
                 </Row>
 
                 <br />
 
                 {/* Mitigation's Repository */}
+                {isMobile? 
+                    <div>
+                        <h2>{mitRep.title[0]} <text className="itemName">{mitRep.title[1]}</text></h2>
+                        <h4 className="itemInfo"><b>{mitRep.itemInfo[0]}</b> {mitRep.itemInfo[1]}</h4>
+                        <h4 className="itemTime">{mitRep.date}</h4>
+                        <h4 className="itemTime"><a style={{color: '#393c3d'}} href={mitRep.link[1]} target="_blank" rel="noreferrer">{mitRep.link[0]}</a></h4>
+                    </div>
+                :
                 <Row id="mitigationsRepository">
                     <Col xs="8">
-                        <h2>Mitigation's Repository, <text className="itemName">Agile Product Owner & Frontend</text></h2>
-                        <h4 className="itemInfo"><b>Software Engineering</b> @ Rowan University w/ Lockheed Martin</h4>
+                    <h2>{mitRep.title[0]} <text className="itemName">{mitRep.title[1]}</text></h2>
+                        <h4 className="itemInfo"><b>{mitRep.itemInfo[0]}</b> {mitRep.itemInfo[1]}</h4>
                     </Col>
                     <Col xs="4">
-                        <h4 className="align-right itemTime">January - May 2020</h4>
-                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="http://anttes.com/mitigations" target="_blank" rel="noreferrer">AntTes.com/Mitigations</a></h4>
+                        <h4 className="align-right itemTime">{mitRep.date}</h4>
+                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href={mitRep.link[1]} target="_blank" rel="noreferrer">{mitRep.link[0]}</a></h4>
                         {/* https://git.io/JUd9b */}
                     </Col>
                 </Row>
+                }
+
                 <ButtonLabels labelList={['HTML', 'CSS', 'AJAX', 'PHP', 'SQL', 'Ubuntu', 'MySQL', 'AWS']} />
                 <Row>
                     <Col xs="8">
@@ -312,16 +428,26 @@ const LandingPage = () => {
                 <br />
 
                 {/* AntTes.com */}
+                {isMobile? 
+                    <div>
+                        <h2>{anttes.title[0]} <text className="itemName">{anttes.title[1]}</text></h2>
+                        <h4 className="itemInfo"><b>{anttes.itemInfo[0]}</b> {anttes.itemInfo[1]}</h4>
+                        <h4 className="itemTime">{anttes.date}</h4>
+                        <h4 className="itemTime"><a style={{color: '#393c3d'}} href={anttes.link[1]} target="_blank" rel="noreferrer">{anttes.link[0]}</a></h4>
+                    </div>
+                :
                 <Row id="antTesWebsite">
                     <Col xs="8">
-                        <h2>AntTes.com, <text className="itemName">Full-Stack</text></h2>
-                        <h4 className="itemInfo"><b>Personal Project</b> & Portfolio</h4>
+                    <h2>{anttes.title[0]} <text className="itemName">{anttes.title[1]}</text></h2>
+                        <h4 className="itemInfo"><b>{anttes.itemInfo[0]}</b> {anttes.itemInfo[1]}</h4>
                     </Col>
                     <Col xs="4">
-                        <h4 className="align-right itemTime">September 2015 - Present</h4>
-                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href="http://AntTes.com">AntTes.com</a></h4>
+                        <h4 className="align-right itemTime">{anttes.date}</h4>
+                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href={anttes.link[1]} target="_blank" rel="noreferrer">{anttes.link[0]}</a></h4>
                     </Col>
                 </Row>
+                }
+
                 <ButtonLabels labelList={['HTML', 'CSS', 'PHP', 'Java', 'Python', 'JavaScript', 'React.js', 'TypeScript']} />
                 <Row>
                     <Col xs="8">
