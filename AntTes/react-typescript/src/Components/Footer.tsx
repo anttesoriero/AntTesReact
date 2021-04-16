@@ -26,21 +26,21 @@ const Footer = () => {
                 <Nav vertical>
                     <NavbarBrand className={'brand'}>Connect with me</NavbarBrand>
                     <Row>
-                        {/* <Col xs="auto"><NavLink style={linkStyle} to="mailTo:anttesoriero@gmail.com"><AiFillMail size="20px" className="iconStyle"/> Email</NavLink></Col>
-                        <Col xs="auto"><NavLink style={linkStyle} to="http://linkedin.com/in/anttesoriero" target="_blank"><AiFillLinkedin size="20px" className="iconStyle"/> LinkedIn</NavLink></Col>
-                        <Col xs="auto"><NavLink style={linkStyle} to="http://github.com/anttesoriero" target="_blank"><AiFillGithub size="20px" className="iconStyle"/> GitHub</NavLink></Col>
-                        <Col xs="auto"><NavLink style={linkStyle} to="http://twitter.com/anttesoriero" target="_blank"><AiFillTwitterSquare size="20px" className="iconStyle"/> Twitter</NavLink></Col> */}
+                        <Col xs="auto"><NavLink style={linkStyle} href="mailTo:anttesoriero@gmail.com"><AiFillMail size={iconSize} className="footIconStyle"/> Email</NavLink></Col>
+                        <Col xs="auto"><NavLink style={linkStyle} href="http://linkedin.com/in/anttesoriero" target="_blank"><AiFillLinkedin size={iconSize} className="footIconStyle"/> LinkedIn</NavLink></Col>
+                        <Col xs="auto"><NavLink style={linkStyle} href="http://github.com/anttesoriero" target="_blank"><AiFillGithub size={iconSize} className="footIconStyle"/> GitHub</NavLink></Col>
+                        <Col xs="auto"><NavLink style={linkStyle} href="http://twitter.com/anttesoriero" target="_blank"><AiFillTwitterSquare size={iconSize} className="footIconStyle"/> Twitter</NavLink></Col>
                         
                         {/* <Col xs="auto"><NavLink style={linkStyle} href="./contact">Contact</NavLink></Col>
                         <Col xs="auto"><NavLink style={linkStyle} href="./legal">Legal</NavLink></Col> */}
 
-                        {
+                        {/* {
                             Object.values(footLinks).map((key, index) => ( 
                                 <div className="footElement">
                                     <Col xs="auto"><NavLink style={linkStyle} to={key[1]} target="_blank">{key[2]} {key[0]}</NavLink></Col>
                                 </div>
                             ))
-                        }
+                        } */}
 
                     </Row>
                 </Nav>
@@ -56,20 +56,20 @@ const Footer = () => {
                         <Nav navbar className="mr-auto"></Nav>
                         
                         <Nav>
-                            {/* <NavLink style={linkStyle} to="mailTo:anttesoriero@gmail.com"><AiFillMail size="20px" className="iconStyle"/> Email</NavLink>
-                            <NavLink style={linkStyle} to="http://linkedin.com/in/anttesoriero" target="_blank"><AiFillLinkedin size="20px" className="iconStyle"/> LinkedIn</NavLink>
-                            <NavLink style={linkStyle} to="http://github.com/anttesoriero" target="_blank"><AiFillGithub size="20px" className="iconStyle"/> GitHub</NavLink>
-                            <NavLink style={linkStyle} to="http://twitter.com/anttesoriero" target="_blank"><AiFillTwitterSquare size="20px" className="iconStyle"/> Twitter</NavLink> */}
+                            <NavLink style={linkStyle} href="mailTo:anttesoriero@gmail.com"><AiFillMail size={iconSize} className="footIconStyle"/> Email</NavLink>
+                            <NavLink style={linkStyle} href="http://linkedin.com/in/anttesoriero" target="_blank"><AiFillLinkedin size={iconSize} className="footIconStyle"/> LinkedIn</NavLink>
+                            <NavLink style={linkStyle} href="http://github.com/anttesoriero" target="_blank"><AiFillGithub size={iconSize} className="footIconStyle"/> GitHub</NavLink>
+                            <NavLink style={linkStyle} href="http://twitter.com/anttesoriero" target="_blank"><AiFillTwitterSquare size={iconSize} className="footIconStyle"/> Twitter</NavLink>
                             {/* <NavLink style={linkStyle} href="./contact">Contact</NavLink>
                             <NavLink style={linkStyle} href="./legal">Legal</NavLink> */}
 
-                        {
+                        {/* {
                             Object.values(footLinks).map((key, index) => ( 
                                 <div className="footElement">
                                     <NavLink style={linkStyle} to={key[1]} target="_blank">{key[2]} {key[0]}</NavLink>
                                 </div>
                             ))
-                        }
+                        } */}
                         </Nav>
                     </Collapse>
                 </Navbar>
