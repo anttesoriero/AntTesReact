@@ -9,12 +9,12 @@ const Footer = () => {
     let linkStyle = {color: 'white', textDecoration: 'none'}
 
     const iconSize = "30px"
-    const footLinks = {
-        LinkedIn: ["LinkedIn", "http://linkedin.com/in/anttesoriero", <AiFillLinkedin size={iconSize} className="footIconStyle"/>],
-        GitHub: ["GitHub", "http://github.com/anttesoriero", <AiFillGithub size={iconSize} className="footIconStyle"/>],
-        Twitter: ["Twitter", "http://twitter.com/anttesoriero", <AiFillTwitterSquare size={iconSize} className="footIconStyle"/>],
-        Email: ["Email", "mailTo:anttesoriero@gmail.com", <AiFillMail size={iconSize} className="footIconStyle"/>]
-    }
+    // const footLinks = {
+    //     LinkedIn: ["LinkedIn", "http://linkedin.com/in/anttesoriero", <AiFillLinkedin size={iconSize} className="footIconStyle"/>],
+    //     GitHub: ["GitHub", "http://github.com/anttesoriero", <AiFillGithub size={iconSize} className="footIconStyle"/>],
+    //     Twitter: ["Twitter", "http://twitter.com/anttesoriero", <AiFillTwitterSquare size={iconSize} className="footIconStyle"/>],
+    //     Email: ["Email", "mailTo:anttesoriero@gmail.com", <AiFillMail size={iconSize} className="footIconStyle"/>]
+    // }
 
     const isMobile = window.innerWidth < 1000;
 
