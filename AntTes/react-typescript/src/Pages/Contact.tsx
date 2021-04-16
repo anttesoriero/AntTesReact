@@ -6,7 +6,7 @@ import Footer from '../Components/Footer';
 const Contact = () => {
 
     return (
-        <div>
+        <div className="App">
             <Navigation pageName="Contact"/>
             
             <Container>

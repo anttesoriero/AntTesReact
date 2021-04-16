@@ -43,7 +43,7 @@ const ContactTest = () => {
     //     }};
 
     return (
-        <div>
+        <div className="App">
             <Navigation pageName="Contact"/>
             
             <Container>

@@ -12,7 +12,7 @@ const ErrorPage = () => {
     }
 
     return (
-        <div>
+        <div className="App">
             <Navigation pageName="404: Page not Found"/>
             <Container>
 

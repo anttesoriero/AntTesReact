@@ -56,7 +56,7 @@ const Splash = () => {
     }
 
     return (
-        <div>
+        <div className="App">
             <Navigation pageName="Splash"/>
             {isMobile
             ?

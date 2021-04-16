@@ -20,7 +20,7 @@ const LandingPage = () => {
     const osList = ['MacOS', 'Windows', 'Unix', 'Linux']
 
     return (
-        <div>
+        <div className="App">
             <Navigation pageName="Home"/>
             {isMobile
             ?
