@@ -19,8 +19,8 @@ const LandingPage = () => {
     const toolsList = ['Eclipse', 'VSCode', 'IntelliJ', 'PyCharm', 'PHPStorm', 'WebStorm', 'Xcode']
     const osList = ['MacOS', 'Windows', 'Unix', 'Linux']
 
-    // -- Lists for consistent data
-    // - Education
+    // -- Lists for consistent data 
+    // - Education Header
     const rowan = {
         title: ["Rowan University", "Glassboro, NJ"],
         itemInfo: [
@@ -35,6 +35,52 @@ const LandingPage = () => {
         itemInfo: ["High School Diploma"],
         date: "September 2013 - June 2017"
     }
+
+    // - Education Body
+    const rowanCourses = [
+        "Object Oriented Programming",
+        "Foundations of Computer Science",
+        "Lab Techniques",
+        "Computer Organization",
+        "Data Structures & Design and Analysis of Algorithms",
+        "Linear Algebra",
+        "Calculus I, II, III",
+        "Probability & Statistics",
+        "Programming Languages",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Cyber Security",
+        "Operating Systems",
+        <a href="#mitigationsRepository" style={{color: '#393c3d'}}>Software Engineering (Role: Agile Product Owner)</a>,
+        "Graduate Advanced Robotics",
+        <a href="#oddjobs" style={{color: '#393c3d'}}>Senior Project - OddJobs</a>,
+        "Databases",
+        "Human-Computer Interaction"
+    ]
+
+    const rowanActivities = [
+        ["http://anttes.com/research", "Robotics Researcher"],
+        ["https://csm.rowan.edu/departments/cs/students/learning_assistants/index.html","Computer Science Learning Assistant"],
+        ["https://cpa.rowan.edu/music/ensembles/RowanUniversityBands.html","RU Bands Percussionist"],
+        ["https://cpa.rowan.edu/music/ensembles/earlymusic.html","Collegium Musicum: Music of the Old World"],
+        ["https://bit.ly/RUMTC","Music Therapy Club - Club Treasurer & Senator"],
+        ["https://cpa.rowan.edu/music/ensembles/instrumental.html","Percussion Ensemble"],
+        ["https://sites.rowan.edu/volunteer/volunteerism/B2B/index.html","Back to the Boro Volunteer"]
+    ]
+
+    const rhsCourses = [
+        "AP Computer Science",
+        "Calculus I Honors",
+        <a href="https://supa.syr.edu/about-supa/" style={{color: '#393c3d'}} target="_blank" rel="noreferrer">Forensics Honors with Syracuse University Project Advance</a>,
+        "Algebra II E"
+    ]
+
+    const rhsActivities = [
+        ["https://www.rhsbands.org/curricular-bands", "RHS Bands Percussionist"],
+        ["https://www.rhsbands.org/marching-band", "RHS Marching Band Section Leader"],
+        ["https://www.rhsbands.org/chamber-ensembles", "Percussion Ensemble"],
+        ["https://www.rhsbands.org/jazz-band", "Jazz Band"]
+    ]
 
     // - Experience
     const robRes = {
@@ -75,6 +121,12 @@ const LandingPage = () => {
         itemInfo: ["Personal Project", "& Portfolio"],
         link: ["AntTes.com", "http://anttes.com"],
         date: "September 2015 - Present"
+    }
+
+    // Change xsSize for paragraph widths
+    var xsSize = "8"
+    if(isMobile) {
+        xsSize = ""
     }
 
 
@@ -175,44 +227,43 @@ const LandingPage = () => {
                 
 
                 <br />
-                <Row>
-                    <Col xs="6">
+                {isMobile 
+                ?
+                    <div>
                         <h4 className="itemList">Relevant Coursework</h4>
                         <ul className="course">
-                            <li>Object Oriented Programming</li>
-                            <li>Foundations of Computer Science</li>
-                            <li>Lab Techniques</li>
-                            <li>Computer Organization</li>
-                            <li>Data Structures & Design and Analysis of Algorithms</li>
-                            <li>Linear Algebra</li>
-                            <li>Calculus I, II, III</li>
-                            <li>Probability & Statistics</li>
-                            <li>Programming Languages</li>
-                            <li>Artificial Intelligence</li>
-                            <li>Machine Learning</li>
-                            <li>Cyber Security</li>
-                            <li>Operating Systems</li>
-                            <li><a href="#mitigationsRepository" style={{color: '#393c3d'}}>Software Engineering (Role: Agile Product Owner)</a></li>
-                            <li>Graduate Advanced Robotics</li>
-                            <li><a href="#oddjobs" style={{color: '#393c3d'}}>Senior Project - OddJobs</a></li>
-                            <li>Databases</li>
-                            <li>Human-Computer Interaction</li>
-                            
+                            {rowanCourses.map(course => (
+                                <li>{course}</li>
+                            ))}
                         </ul>
-                    </Col>
-                    <Col xs="6">
+                        <br />
                         <h4 className="itemList">Activities</h4>
-                        <ul className="course">
-                            <li><a href="http://anttes.com/research" style={{color: '#393c3d'}} target="_blank" rel="noreferrer">Robotics Researcher</a></li>
-                            <li><a href="https://csm.rowan.edu/departments/cs/students/learning_assistants/index.html" style={{color: '#393c3d'}} target="_blank" rel="noreferrer">Computer Science Learning Assistant</a></li>
-                            <li><a href="https://cpa.rowan.edu/music/ensembles/RowanUniversityBands.html" style={{color: '#393c3d'}} target="_blank" rel="noreferrer">RU Bands Percussionist</a></li>
-                            <li><a href="https://cpa.rowan.edu/music/ensembles/earlymusic.html" style={{color: '#393c3d'}} target="_blank" rel="noreferrer">Collegium Musicum: Music of the Old World</a></li>
-                            <li><a href="https://bit.ly/RUMTC" style={{color: '#393c3d'}} target="_blank" rel="noreferrer">Music Therapy Club - Club Treasurer & Senator</a></li>
-                            <li><a href="https://cpa.rowan.edu/music/ensembles/instrumental.html" style={{color: '#393c3d'}} target="_blank" rel="noreferrer">Percussion Ensemble</a></li>
-                            <li><a href="https://sites.rowan.edu/volunteer/volunteerism/B2B/index.html" style={{color: '#393c3d'}} target="_blank" rel="noreferrer">Back to the Boro Volunteer</a></li>
+                            <ul className="course">
+                                {rowanActivities.map(activity => (
+                                    <li><a href={activity[0]} style={{color: '#393c3d'}} target="_blank" rel="noreferrer">{activity[1]}</a></li>
+                                ))}
                         </ul>
-                    </Col>
-                </Row>
+                    </div>
+                :
+                    <Row>
+                        <Col xs="6">
+                            <h4 className="itemList">Relevant Coursework</h4>
+                            <ul className="course">
+                                {rowanCourses.map(course => (
+                                    <li>{course}</li>
+                                ))}
+                            </ul>
+                        </Col>
+                        <Col xs="6">
+                            <h4 className="itemList">Activities</h4>
+                            <ul className="course">
+                                {rowanActivities.map(activity => (
+                                    <li><a href={activity[0]} style={{color: '#393c3d'}} target="_blank" rel="noreferrer">{activity[1]}</a></li>
+                                ))}
+                            </ul>
+                        </Col>
+                    </Row>
+                }
 
                 <br />
 
@@ -234,26 +285,43 @@ const LandingPage = () => {
                 }
 
                 <br />
-                <Row>
-                    <Col xs="6">
+                {isMobile 
+                ?
+                    <div>
                         <h4 className="itemList">Relevant Coursework</h4>
                         <ul className="course">
-                            <li>AP Computer Science</li>
-                            <li>Calculus I Honors</li>
-                            <li>Forensics Honors with <a href="https://supa.syr.edu/about-supa/" target="_blank" rel="noreferrer">Syracuse University Project Advance</a></li>
-                            <li>Algebra II E</li>
+                            {rhsCourses.map(course => (
+                                <li>{course}</li>
+                            ))}
                         </ul>
-                    </Col>
-                    <Col xs="6">
+                        <br />
                         <h4 className="itemList">Activities</h4>
-                        <ul className="course">
-                            <li><a href="https://www.rhsbands.org/curricular-bands" style={{color: '#393c3d'}} target="_blank" rel="noreferrer">RHS Bands Percussionist</a></li>
-                            <li><a href="https://www.rhsbands.org/marching-band" style={{color: '#393c3d'}} target="_blank" rel="noreferrer">RHS Marching Band Section Leader</a></li>
-                            <li><a href="https://www.rhsbands.org/chamber-ensembles" style={{color: '#393c3d'}} target="_blank" rel="noreferrer">Percussion Ensemble</a></li>
-                            <li><a href="https://www.rhsbands.org/jazz-band" style={{color: '#393c3d'}} target="_blank" rel="noreferrer">Jazz Band</a></li>
+                            <ul className="course">
+                                {rhsActivities.map(activity => (
+                                    <li><a href={activity[0]} style={{color: '#393c3d'}} target="_blank" rel="noreferrer">{activity[1]}</a></li>
+                                ))}
                         </ul>
-                    </Col>
-                </Row>
+                    </div>
+                :
+                    <Row>
+                        <Col xs="6">
+                            <h4 className="itemList">Relevant Coursework</h4>
+                            <ul className="course">
+                                {rhsCourses.map(course => (
+                                    <li>{course}</li>
+                                ))}
+                            </ul>
+                        </Col>
+                        <Col xs="6">
+                            <h4 className="itemList">Activities</h4>
+                            <ul className="course">
+                                {rhsActivities.map(activity => (
+                                    <li><a href={activity[0]} style={{color: '#393c3d'}} target="_blank" rel="noreferrer">{activity[1]}</a></li>
+                                ))}
+                            </ul>
+                        </Col>
+                    </Row>
+                }
 
                 <br />
                 {/* Experience */}
@@ -279,7 +347,7 @@ const LandingPage = () => {
 
                 <ButtonLabels labelList={['Python', 'LEGO EV3 MicroPython', 'LEGO ev3dev']} />
                 <Row>
-                    <Col xs="8">
+                    <Col xs={xsSize}>
                     <p>
                         Create a script to convert visual based LEGO Scratch code into LEGO MicroPython. 
                         Uses hex code from LEGO Scratch files to identify code blocks. Enhancing use of LEGO and Raspberry Pi robots in learning environments, 
@@ -308,7 +376,7 @@ const LandingPage = () => {
 
                 <ButtonLabels labelList={['Java', 'Python', 'LEGO EV3 MicroPython']} />
                 <Row>
-                    <Col xs="8">
+                    <Col xs={xsSize}>
                     <p>
                         Work closely with computer science students to assist in java and python programming assignments. 
                         Help students understand project goals while developing deeper programming skill. Analyze and help debug code written by students, 
@@ -335,9 +403,9 @@ const LandingPage = () => {
                     </Row>
                 }
 
-                <br />
+                <ButtonLabels labelList={['Microsoft Office Suite', 'Google Workspace']} />
                 <Row>
-                    <Col xs="8">
+                    <Col xs={xsSize}>
                     <p>
                         Build, sort, and organize LEGO robots and parts. Create a new, better structured organization style for 
                         future departmental additions. Work with teammate to create a database to track robot information, part amounts, 
@@ -375,7 +443,7 @@ const LandingPage = () => {
                 
                 <ButtonLabels labelList={['HTML', 'CSS', 'React.js', 'TypeScript', 'Python', 'Flask', 'MySQL', 'AWS']} />
                 <Row>
-                    <Col xs="8">
+                    <Col xs={xsSize}>
                     <p>
                         Web app built using React.js HTML, CSS, TypeScript on the frontend, Python, Flask, MySQL on the backend. 
                         A service that connects people who need helps with tasks withy people who are interesting in earning extra income. 
@@ -417,7 +485,7 @@ const LandingPage = () => {
 
                 <ButtonLabels labelList={['HTML', 'CSS', 'AJAX', 'PHP', 'SQL', 'Ubuntu', 'MySQL', 'AWS']} />
                 <Row>
-                    <Col xs="8">
+                    <Col xs={xsSize}>
                     <p>
                         Working repository to identify and track threats and risks from user input of security controls. 
                         Built using AJAX, HTML, and CSS on the frontend, SQL and ubuntu on an Amazon Web Server on the backend. 
@@ -450,7 +518,7 @@ const LandingPage = () => {
 
                 <ButtonLabels labelList={['HTML', 'CSS', 'PHP', 'Java', 'Python', 'JavaScript', 'React.js', 'TypeScript']} />
                 <Row>
-                    <Col xs="8">
+                    <Col xs={xsSize}>
                     <p>
                         Starting in 2015, this site was created as a personal project from scatch using HTML and CSS, with all styling and design done by hand. 
                         It's original purpose was to test new skills learn in beginner coding classes, and to host original Java and Python projects. As time went on, the site changed 
