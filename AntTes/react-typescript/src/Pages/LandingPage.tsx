@@ -1,12 +1,12 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { Container, Jumbotron, Row, Col, Button, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledButtonDropdown } from 'reactstrap';
+import { Container, Jumbotron, Row, Col, Button, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledButtonDropdown, ButtonGroup } from 'reactstrap';
 import Navigation from '../Components/Navigation';
 import Footer from '../Components/Footer';
 import ATSpin from '../Components/ATSpin';
 import ButtonLabels from '../Components/ButtonLabels';
 import ATPic from '../Styles/Images/AnthonyTesoriero.png';
-import { AiFillGithub, AiFillYoutube } from 'react-icons/ai';
+import { AiFillGithub, AiFillYoutube, AiFillLinkedin, AiFillFileText } from 'react-icons/ai';
 
 const LandingPage = () => {
 
@@ -173,7 +173,12 @@ const LandingPage = () => {
 
                 {/* --= Resume =-- */}
                 <h1 className="centered" id="resume">R&eacute;sum&eacute;</h1>
-                <span className="centered"><Button outline color="primary" target="_blank" href='http://anttes.com/AnthonyTesorieroResume.pdf'>Open Full PDF</Button></span>
+                <div className="centered">
+                    <ButtonGroup className="splashButton">
+                            <Button outline color="primary" target="_blank" href='http://anttes.com/AnthonyTesorieroResume.pdf'><AiFillFileText className="splashIconStyle" size="35"/>R&eacute;sum&eacute; PDF</Button>
+                            <Button outline color="primary" target="_blank" href='http://linkedin.com/in/anttesoriero'><AiFillLinkedin className="splashIconStyle" size="35"/>LinkedIn</Button>
+                    </ButtonGroup>
+                </div>
                 <br />
                 {isMobile?
                 <span className="centered">
