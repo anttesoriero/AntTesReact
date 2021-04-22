@@ -114,6 +114,7 @@ const Splash = () => {
                                     <br />
                                 </div>
                             )
+
                         case 'myLinks':
                             return (
                                 <div>
@@ -153,6 +154,7 @@ const Splash = () => {
                                     </UncontrolledCollapse>
                                 </div>
                             )
+                            
                         case 'socialJustice':
                             return (
                                 <div>
