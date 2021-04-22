@@ -10,8 +10,13 @@ const Navigation = (prop: {pageName: string}) => {
 
     const isMobile = window.innerWidth < 1000;
 
+    const navItems = [
+        ["Resume", "./#resume"],
+        ["My Links", "./splash"]
+    ]
+
     return (
-        <div>
+        <div className="header">
             <Helmet>
                 <title>Anthony Tesoriero | {prop.pageName}</title>
             </Helmet>
@@ -26,8 +31,12 @@ const Navigation = (prop: {pageName: string}) => {
                     {/* Dropdown */}
                     <UncontrolledCollapse toggler="#toggler">
                         <ListGroup flush>
-                            <ListGroupItem tag="a" href="./#resume" className="centered" action><h5 style={{ fontWeight: 'bold' }}>R&eacute;sum&eacute;</h5></ListGroupItem>
-                            <ListGroupItem tag="a" href="http://anttes.com/AnthonyTesorieroResume.pdf" target="_blank" className="centered" action><h5 style={{ fontWeight: 'bold' }}>Full R&eacute;sum&eacute; PDF</h5></ListGroupItem>
+                            {navItems.map(item => (
+                                <ListGroupItem tag="a" href={item[1]} className="centered" action><h5 style={{ fontWeight: 'bold' }}>{item[0]}</h5></ListGroupItem>
+                            ))}
+
+                            {/* Resume PDF */}
+                            <ListGroupItem tag="a" href="http://anttes.com/AnthonyTesorieroResume.pdf" target="_blank" className="centered" action><h5 style={{ fontWeight: 'bold' }}>Resume PDF</h5></ListGroupItem>
                         </ListGroup>
                     </UncontrolledCollapse>
                 </div>
@@ -37,11 +46,7 @@ const Navigation = (prop: {pageName: string}) => {
                     <NavbarToggler onClick={toggleNav} />
                     <Collapse isOpen={isOpen} navbar>
                         <Nav navbar className="mr-auto">
-                            {/*
-                            <NavItem>
-                                <NavLink href="/sample">Sample</NavLink>
-                            </NavItem>
-                            */}
+                            {/* Items next to logo*/}
                         </Nav>
                         
 
@@ -52,15 +57,13 @@ const Navigation = (prop: {pageName: string}) => {
                             </DropdownToggle>
                             {/* Checks if signed in, then conditionally renders different menu */}
                             <DropdownMenu right>
-                                    <DropdownItem href="./#resume">
-                                        R&eacute;sum&eacute;
-                                    </DropdownItem>
+                                    {navItems.map(item => (
+                                        <DropdownItem href={item[1]}>{item[0]}</DropdownItem>
+                                    ))}
 
-                                    <DropdownItem divider />
-                                    
-                                    <DropdownItem href="http://anttes.com/AnthonyTesorieroResume.pdf" target="_blank">
-                                        Full R&eacute;sum&eacute; PDF
-                                    </DropdownItem>
+                                    {/* Resume PDF */}
+                                    <DropdownItem divider />                                    
+                                    <DropdownItem href="http://anttes.com/AnthonyTesorieroResume.pdf" target="_blank">Resume PDF</DropdownItem>
                                 </DropdownMenu>
                         </UncontrolledDropdown>
                     </Collapse>

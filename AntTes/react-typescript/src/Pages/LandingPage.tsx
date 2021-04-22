@@ -59,7 +59,7 @@ const LandingPage = () => {
     ]
 
     const rowanActivities = [
-        ["http://anttes.com/research", "Robotics Researcher"],
+        ["https://csm.rowan.edu/departments/cs/research/cs-studentresearch.html", "Robotics Researcher"],
         ["https://csm.rowan.edu/departments/cs/students/learning_assistants/index.html","Computer Science Learning Assistant"],
         ["https://cpa.rowan.edu/music/ensembles/RowanUniversityBands.html","RU Bands Percussionist"],
         ["https://cpa.rowan.edu/music/ensembles/earlymusic.html","Collegium Musicum: Music of the Old World"],
@@ -86,7 +86,7 @@ const LandingPage = () => {
     const robRes = {
         title: "Robotics Researcher",
         itemInfo: "Department of Computer Science, Rowan University, Glassboro, NJ",
-        date: "January 2019 - Present"
+        date: "January 2019 - May 2021"
     }
 
     const csLA = {
@@ -172,10 +172,10 @@ const LandingPage = () => {
                 <br />
 
                 {/* --= Resume =-- */}
-                <h1 className="centered" id="resume">R&eacute;sum&eacute;</h1>
+                <h1 className="centered" id="resume">Resume</h1>
                 <div className="centered">
                     <ButtonGroup className="splashButton">
-                            <Button outline color="primary" target="_blank" href='http://anttes.com/AnthonyTesorieroResume.pdf'><AiFillFileText className="splashIconStyle" size="35"/>R&eacute;sum&eacute; PDF</Button>
+                            <Button outline color="primary" target="_blank" href='http://anttes.com/AnthonyTesorieroResume.pdf'><AiFillFileText className="splashIconStyle" size="35"/>Resume PDF</Button>
                             <Button outline color="primary" target="_blank" href='http://linkedin.com/in/anttesoriero'><AiFillLinkedin className="splashIconStyle" size="35"/>LinkedIn</Button>
                     </ButtonGroup>
                 </div>
