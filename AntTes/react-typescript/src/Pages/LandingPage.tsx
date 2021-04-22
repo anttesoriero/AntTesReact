@@ -7,6 +7,9 @@ import ATSpin from '../Components/ATSpin';
 import ButtonLabels from '../Components/ButtonLabels';
 import ATPic from '../Styles/Images/AnthonyTesoriero.png';
 import { AiFillGithub, AiFillYoutube, AiFillLinkedin, AiFillFileText } from 'react-icons/ai';
+import LPEducation from '../Components/LandingPageComps/LPEducation';
+import LPExperience from '../Components/LandingPageComps/LPExperience';
+import LPProject from '../Components/LandingPageComps/LPProject';
 
 const LandingPage = () => {
 
@@ -123,12 +126,8 @@ const LandingPage = () => {
         date: "September 2015 - Present"
     }
 
-    // Change xsSize for paragraph widths
-    var xsSize = "8"
-    if(isMobile) {
-        xsSize = ""
-    }
-
+    // OJ Link - https://git.io/JUd9W
+    // Mit Link - https://git.io/JUd9b
 
     return (
         <div className="App">
@@ -194,7 +193,6 @@ const LandingPage = () => {
                     </UncontrolledButtonDropdown>
                     <br />
                 </span>
-                
                 :
                 <h2 className="centered">
                     <a href="#education">Education</a>  {' '}-{' '}  
@@ -205,338 +203,105 @@ const LandingPage = () => {
                 }
 
                 
-                
                 {/* Education */}
                 <h4 id="education">Education</h4>
                 <hr />
 
                 {/* Rowan */}
-                {isMobile? 
-                    <div>
-                        <h2>{rowan.title[0]} <text className="itemName">{rowan.title[1]}</text></h2>
-                        <h4 className="itemInfo">{rowan.itemInfo[0]}</h4>
-                        <h4 className="itemInfo">{rowan.itemInfo[1]}</h4>
-                        <h4 className="itemTime">{rowan.date}</h4>
-                    </div>
-                :
-                    <Row>
-                        <Col xs="8">
-                            <h2>{rowan.title[0]} <text className="itemName">{rowan.title[1]}</text></h2>
-                            <h4 className="itemInfo">{rowan.itemInfo[0]}</h4>
-                            <h4 className="itemInfo">{rowan.itemInfo[1]}</h4>
-
-                        </Col>
-                        <Col xs="4"><h4 className="align-right itemTime">{rowan.date}</h4></Col>
-                    </Row>
-                }
-                
-
-                <br />
-                {isMobile 
-                ?
-                    <div>
-                        <h4 className="itemList">Relevant Coursework</h4>
-                        <ul className="course">
-                            {rowanCourses.map(course => (
-                                <li>{course}</li>
-                            ))}
-                        </ul>
-                        <br />
-                        <h4 className="itemList">Activities</h4>
-                            <ul className="course">
-                                {rowanActivities.map(activity => (
-                                    <li><a href={activity[0]} style={{color: '#393c3d'}} target="_blank" rel="noreferrer">{activity[1]}</a></li>
-                                ))}
-                        </ul>
-                    </div>
-                :
-                    <Row>
-                        <Col xs="6">
-                            <h4 className="itemList">Relevant Coursework</h4>
-                            <ul className="course">
-                                {rowanCourses.map(course => (
-                                    <li>{course}</li>
-                                ))}
-                            </ul>
-                        </Col>
-                        <Col xs="6">
-                            <h4 className="itemList">Activities</h4>
-                            <ul className="course">
-                                {rowanActivities.map(activity => (
-                                    <li><a href={activity[0]} style={{color: '#393c3d'}} target="_blank" rel="noreferrer">{activity[1]}</a></li>
-                                ))}
-                            </ul>
-                        </Col>
-                    </Row>
-                }
-
-                <br />
+                <LPEducation organization={rowan} orgCourse={rowanCourses} orgActivities={rowanActivities}/>
 
                 {/* RHS */}
-                {isMobile? 
-                    <div>
-                        <h2>{rhs.title[0]} <text className="itemName">{rhs.title[1]}</text></h2>
-                        <h4 className="itemInfo">{rhs.itemInfo[0]}</h4>
-                        <h4 className="itemTime">{rhs.date}</h4>
-                    </div>
-                :
-                    <Row>
-                        <Col xs="8">
-                            <h2>{rhs.title[0]} <text className="itemName">{rhs.title[1]}</text></h2>
-                            <h4 className="itemInfo">{rhs.itemInfo[0]}</h4>
-                        </Col>
-                        <Col xs="4"><h4 className="align-right itemTime">{rhs.date}</h4></Col>
-                    </Row>
-                }
-
-                <br />
-                {isMobile 
-                ?
-                    <div>
-                        <h4 className="itemList">Relevant Coursework</h4>
-                        <ul className="course">
-                            {rhsCourses.map(course => (
-                                <li>{course}</li>
-                            ))}
-                        </ul>
-                        <br />
-                        <h4 className="itemList">Activities</h4>
-                            <ul className="course">
-                                {rhsActivities.map(activity => (
-                                    <li><a href={activity[0]} style={{color: '#393c3d'}} target="_blank" rel="noreferrer">{activity[1]}</a></li>
-                                ))}
-                        </ul>
-                    </div>
-                :
-                    <Row>
-                        <Col xs="6">
-                            <h4 className="itemList">Relevant Coursework</h4>
-                            <ul className="course">
-                                {rhsCourses.map(course => (
-                                    <li>{course}</li>
-                                ))}
-                            </ul>
-                        </Col>
-                        <Col xs="6">
-                            <h4 className="itemList">Activities</h4>
-                            <ul className="course">
-                                {rhsActivities.map(activity => (
-                                    <li><a href={activity[0]} style={{color: '#393c3d'}} target="_blank" rel="noreferrer">{activity[1]}</a></li>
-                                ))}
-                            </ul>
-                        </Col>
-                    </Row>
-                }
-
-                <br />
+                <LPEducation organization={rhs} orgCourse={rhsCourses} orgActivities={rhsActivities}/>
+                
+                
                 {/* Experience */}
                 <h4 id="experience">Experience</h4>
                 <hr />
                 
                 {/* Robotics Research */}
-                {isMobile? 
-                    <div>
-                        <h2>{robRes.title}</h2>
-                        <h4 className="itemInfo">{robRes.itemInfo}</h4>
-                        <h4 className="itemTime">{robRes.date}</h4>
-                    </div>
-                :
-                    <Row>
-                        <Col xs="8">
-                            <h2>{robRes.title}</h2>
-                            <h4 className="itemInfo">{robRes.itemInfo}</h4>
-                        </Col>
-                        <Col xs="4"><h4 className="align-right itemTime">{robRes.date}</h4></Col>
-                    </Row>
-                }
-
-                <ButtonLabels labelList={['Python', 'LEGO EV3 MicroPython', 'LEGO ev3dev']} />
-                <Row>
-                    <Col xs={xsSize}>
-                    <p>
-                        Create a script to convert visual based LEGO Scratch code into LEGO MicroPython. 
-                        Uses hex code from LEGO Scratch files to identify code blocks. Enhancing use of LEGO and Raspberry Pi robots in learning environments, 
-                        and finding a way to be able to use both types interchangeably at low costs to increase enrollment.
-                    </p>
-                    </Col>
-                </Row>
-                <br />
+                <LPExperience experience = {robRes} labels = {['Python', 'LEGO EV3 MicroPython', 'LEGO ev3dev']} 
+                    expBody = {
+                        <p>
+                            Create a script to convert visual based LEGO Scratch code into LEGO MicroPython. 
+                            Uses hex code from LEGO Scratch files to identify code blocks. Enhancing use of LEGO and Raspberry Pi robots in learning environments, 
+                            and finding a way to be able to use both types interchangeably at low costs to increase enrollment.
+                        </p>
+                    }
+                />
 
                 {/* Learning Assistant */}
-                {isMobile? 
-                    <div>
-                        <h2>{csLA.title}</h2>
-                        <h4 className="itemInfo">{csLA.itemInfo}</h4>
-                        <h4 className="itemTime">{csLA.date}</h4>
-                    </div>
-                :
-                    <Row>
-                        <Col xs="8">
-                            <h2>{csLA.title}</h2>
-                            <h4 className="itemInfo">{csLA.itemInfo}</h4>
-                        </Col>
-                        <Col xs="4"><h4 className="align-right itemTime">{csLA.date}</h4></Col>
-                    </Row>
-                }
-
-                <ButtonLabels labelList={['Java', 'Python', 'LEGO EV3 MicroPython']} />
-                <Row>
-                    <Col xs={xsSize}>
-                    <p>
-                        Work closely with computer science students to assist in java and python programming assignments. 
-                        Help students understand project goals while developing deeper programming skill. Analyze and help debug code written by students, 
-                        while providing feedback to promote deeper independent programming skills, and group collaboration.
-                    </p>
-                    </Col>
-                </Row>
-                <br />
+                <LPExperience experience = {csLA} labels = {['Java', 'Python', 'LEGO EV3 MicroPython']} 
+                    expBody = {
+                        <p>
+                            Work closely with computer science students to assist in java and python programming assignments. 
+                            Help students understand project goals while developing deeper programming skill. Analyze and help debug code written by students, 
+                            while providing feedback to promote deeper independent programming skills, and group collaboration.
+                        </p>
+                    }
+                />
 
                 {/* Robotics Assistant */}
-                {isMobile? 
-                    <div>
-                        <h2>{robAss.title}</h2>
-                        <h4 className="itemInfo">{robAss.itemInfo}</h4>
-                        <h4 className="itemTime">{robAss.date}</h4>
-                    </div>
-                :
-                    <Row>
-                        <Col xs="8">
-                            <h2>{robAss.title}</h2>
-                            <h4 className="itemInfo">{robAss.itemInfo}</h4>
-                        </Col>
-                        <Col xs="4"><h4 className="align-right itemTime">{robAss.date}</h4></Col>
-                    </Row>
-                }
+                <LPExperience experience = {robAss} labels = {['Microsoft Office Suite', 'Google Workspace']} 
+                    expBody = {
+                        <p>
+                            Build, sort, and organize LEGO robots and parts. Create a new, better structured organization style for 
+                            future departmental additions. Work with teammate to create a database to track robot information, part amounts, 
+                            and keep equipment properly organized and easily accessible.
+                        </p>
+                    }
+                />
+                
 
-                <ButtonLabels labelList={['Microsoft Office Suite', 'Google Workspace']} />
-                <Row>
-                    <Col xs={xsSize}>
-                    <p>
-                        Build, sort, and organize LEGO robots and parts. Create a new, better structured organization style for 
-                        future departmental additions. Work with teammate to create a database to track robot information, part amounts, 
-                        and keep equipment properly organized and easily accessible.
-                    </p>
-                    </Col>
-                </Row>
-
-                <br />
                 {/* Projects */}
                 <h4 id="projects">Projects</h4>
                 <hr />
 
                 {/* OddJobs */}
-                {isMobile? 
-                    <div>
-                        <h2>{oddJobs.title[0]} <text className="itemName">{oddJobs.title[1]}</text></h2>
-                        <h4 className="itemInfo"><b>{oddJobs.itemInfo[0]}</b> {oddJobs.itemInfo[1]}</h4>
-                        <h4 className="itemTime">{oddJobs.date}</h4>
-                        <h4 className="itemTime"><a style={{color: '#393c3d'}} href={oddJobs.link[1]} target="_blank" rel="noreferrer">{oddJobs.link[0]}</a></h4>
-                    </div>
-                :
-                <Row id="oddjobs">
-                    <Col xs="8">
-                    <h2>{oddJobs.title[0]} <text className="itemName">{oddJobs.title[1]}</text></h2>
-                        <h4 className="itemInfo"><b>{oddJobs.itemInfo[0]}</b> {oddJobs.itemInfo[1]}</h4>
-                    </Col>
-                    <Col xs="4">
-                        <h4 className="align-right itemTime">{oddJobs.date}</h4>
-                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href={oddJobs.link[1]} target="_blank" rel="noreferrer">{oddJobs.link[0]}</a></h4>
-                        {/* https://git.io/JUd9W */}
-                    </Col>
-                </Row>
-                }
-                
-                <ButtonLabels labelList={['HTML', 'CSS', 'React.js', 'TypeScript', 'Python', 'Flask', 'MySQL', 'AWS']} />
-                <Row>
-                    <Col xs={xsSize}>
-                    <p>
-                        Web app built using React.js HTML, CSS, TypeScript on the frontend, Python, Flask, MySQL on the backend. 
-                        A service that connects people who need helps with tasks withy people who are interesting in earning extra income. 
-                        Uses surveys to learn the user and collect useful data, to recommend tasks to list/complete, based on what they like.
-                    </p>
-                    <p>* NOTE - OddJobs GitHub Repository is <u>private</u> due to API keys *</p>
-                    
-                    <div className="itemTime" style={{width: 200}}>
-                        <Button className="centered" color="danger" href="https://youtu.be/bv3de-OYx8I" target="_blank">
-                            <AiFillYoutube className="iconStyle" size="30px"/> OddJobs Video
-                        </Button>
-                    </div>
-                    </Col>
-                </Row>
-
-                <br />
+                <LPProject project={oddJobs} labels={['HTML', 'CSS', 'React.js', 'TypeScript', 'Python', 'Flask', 'MySQL', 'AWS']} id="oddjobs" 
+                    projBody = {
+                        <div>
+                            <p>
+                                Web app built using React.js HTML, CSS, TypeScript on the frontend, Python, Flask, MySQL on the backend. 
+                                A service that connects people who need helps with tasks withy people who are interesting in earning extra income. 
+                                Uses surveys to learn the user and collect useful data, to recommend tasks to list/complete, based on what they like.
+                            </p>
+                            <p>* NOTE - OddJobs GitHub Repository is <u>private</u> due to API keys *</p>
+                            
+                            <div className="itemTime" style={{width: 200}}>
+                                <Button className="centered" color="danger" href="https://youtu.be/bv3de-OYx8I" target="_blank">
+                                    <AiFillYoutube className="iconStyle" size="30px"/> OddJobs Video
+                                </Button>
+                            </div>
+                        </div>
+                    } 
+                />
 
                 {/* Mitigation's Repository */}
-                {isMobile? 
-                    <div>
-                        <h2>{mitRep.title[0]} <text className="itemName">{mitRep.title[1]}</text></h2>
-                        <h4 className="itemInfo"><b>{mitRep.itemInfo[0]}</b> {mitRep.itemInfo[1]}</h4>
-                        <h4 className="itemTime">{mitRep.date}</h4>
-                        <h4 className="itemTime"><a style={{color: '#393c3d'}} href={mitRep.link[1]} target="_blank" rel="noreferrer">{mitRep.link[0]}</a></h4>
-                    </div>
-                :
-                <Row id="mitigationsRepository">
-                    <Col xs="8">
-                    <h2>{mitRep.title[0]} <text className="itemName">{mitRep.title[1]}</text></h2>
-                        <h4 className="itemInfo"><b>{mitRep.itemInfo[0]}</b> {mitRep.itemInfo[1]}</h4>
-                    </Col>
-                    <Col xs="4">
-                        <h4 className="align-right itemTime">{mitRep.date}</h4>
-                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href={mitRep.link[1]} target="_blank" rel="noreferrer">{mitRep.link[0]}</a></h4>
-                        {/* https://git.io/JUd9b */}
-                    </Col>
-                </Row>
-                }
-
-                <ButtonLabels labelList={['HTML', 'CSS', 'AJAX', 'PHP', 'SQL', 'Ubuntu', 'MySQL', 'AWS']} />
-                <Row>
-                    <Col xs={xsSize}>
-                    <p>
-                        Working repository to identify and track threats and risks from user input of security controls. 
-                        Built using AJAX, HTML, and CSS on the frontend, SQL and ubuntu on an Amazon Web Server on the backend. 
-                        After threats are calculated, they are forked from the mitigation, and able to be seen by users on the website, similar to a GitHub for mitigations.
-                    </p>
-                    </Col>
-                </Row>
-                <br />
+                <LPProject project={mitRep} labels={['HTML', 'CSS', 'AJAX', 'PHP', 'SQL', 'Ubuntu', 'MySQL', 'AWS']} id="mitigationsRepository" 
+                    projBody = {
+                        <p>
+                            Working repository to identify and track threats and risks from user input of security controls. 
+                            Built using AJAX, HTML, and CSS on the frontend, SQL and ubuntu on an Amazon Web Server on the backend. 
+                            After threats are calculated, they are forked from the mitigation, and able to be seen by users on the website, similar to a GitHub for mitigations.
+                        </p>
+                    } 
+                />
 
                 {/* AntTes.com */}
-                {isMobile? 
-                    <div>
-                        <h2>{anttes.title[0]} <text className="itemName">{anttes.title[1]}</text></h2>
-                        <h4 className="itemInfo"><b>{anttes.itemInfo[0]}</b> {anttes.itemInfo[1]}</h4>
-                        <h4 className="itemTime">{anttes.date}</h4>
-                        <h4 className="itemTime"><a style={{color: '#393c3d'}} href={anttes.link[1]} target="_blank" rel="noreferrer">{anttes.link[0]}</a></h4>
-                    </div>
-                :
-                <Row id="antTesWebsite">
-                    <Col xs="8">
-                    <h2>{anttes.title[0]} <text className="itemName">{anttes.title[1]}</text></h2>
-                        <h4 className="itemInfo"><b>{anttes.itemInfo[0]}</b> {anttes.itemInfo[1]}</h4>
-                    </Col>
-                    <Col xs="4">
-                        <h4 className="align-right itemTime">{anttes.date}</h4>
-                        <h4 className="align-right itemTime"><a style={{color: '#393c3d'}} href={anttes.link[1]} target="_blank" rel="noreferrer">{anttes.link[0]}</a></h4>
-                    </Col>
-                </Row>
-                }
-
-                <ButtonLabels labelList={['HTML', 'CSS', 'PHP', 'Java', 'Python', 'JavaScript', 'React.js', 'TypeScript']} />
-                <Row>
-                    <Col xs={xsSize}>
-                    <p>
-                        Starting in 2015, this site was created as a personal project from scatch using HTML and CSS, with all styling and design done by hand. 
-                        It's original purpose was to test new skills learn in beginner coding classes, and to host original Java and Python projects. As time went on, the site changed 
-                        a lot, later using some Bootstrap styling, as well as a full design overhaul with minor JavaScript. Today, the site is is completely built using
-                        React.js and TypeScript, which was learned from the 4 month long <a href="#oddjobs">OddJobs Project</a> in 2020.
-                    </p>
-                    </Col>
-                </Row>
-                <br />
+                <LPProject project={anttes} labels={['HTML', 'CSS', 'PHP', 'Java', 'Python', 'JavaScript', 'React.js', 'TypeScript']} id="antTesWebsite" 
+                    projBody = {
+                        <p>
+                            Starting in 2015, this site was created as a personal project from scatch using HTML and CSS, with all styling and design done by hand. 
+                            It's original purpose was to test new skills learn in beginner coding classes, and to host original Java and Python projects. As time went on, the site changed 
+                            a lot, later using some Bootstrap styling, as well as a full design overhaul with minor JavaScript. Today, the site is is completely built using
+                            React.js and TypeScript, which was learned from the 4 month long <a href="#oddjobs">OddJobs Project</a> in 2020.
+                        </p>
+                    } 
+                />
 
                 <div className="centered"><Button size="lg" href="https://github.com/anttesoriero" target="_blank"><AiFillGithub className="iconStyle" size="30px"/> Check out more on <b>GitHub</b></Button></div>
-
                 <br />
+
                 
                 {/* Skills */}
                 <h4 id="skills">Skills</h4>
