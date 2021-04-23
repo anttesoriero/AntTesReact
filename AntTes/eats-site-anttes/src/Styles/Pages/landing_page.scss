@@ -1,0 +1,79 @@
+$theme-colors: (
+  "primary": #4281A4,
+  "danger":  #4281A4
+);
+
+.jumbotron {
+    border-radius: 0 !important;
+}
+
+.LandingJumbo {
+    background-color: #4281A4;
+    border-bottom:7px solid #ffcc00;
+    max-height: 350px;
+
+    h1 {
+        color: #fff;
+        font-size: 48px;  
+        // font-family: 'Cousine', ;
+        font-weight: bold;
+    }
+
+    h3 {
+        color: #2F4858;
+        /* font-size: 4px; */
+        // font-family: 'Cousine', ;
+        /* font-family: 'Shift', sans-serif; */
+        font-weight: bold;
+    }
+      
+    p {
+        font-size: 20px;
+        color: #fff;
+    }
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.align-right {
+    float: right;
+}
+
+.itemName {
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.itemInfo {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.itemTime {
+    font-weight: 400;
+}
+
+.itemList {
+    font-weight: 300;
+}
+
+.course {
+    a {
+        color: '#393c3d';
+    }
+}
+
+.divider{
+    width:10px;
+    height:auto;
+    display:inline-block;
+}
+
+.iconStyle {
+    vertical-align: sub;
+    padding-right: 5px;
+}
