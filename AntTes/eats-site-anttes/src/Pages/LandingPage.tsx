@@ -137,7 +137,7 @@ const LandingPage = () => {
             <Jumbotron className="LandingJumbo">
                 <Container>
                     <Row>
-                        <Col><h1>Hi, I'm Anthony</h1></Col>
+                        <Col><h1>Eats</h1></Col>
                         <Col><ATSpin image={ATPic} size="85px"/></Col>
                     </Row>
                     <h3>"The Secret Ingredient is Nothing"</h3>
@@ -149,7 +149,7 @@ const LandingPage = () => {
                 <Container>
                     <Row>
                         <Col>
-                            <h1>Hi, I'm Anthony</h1>
+                            <h1>Eats</h1>
                             <h3>"The Secret Ingredient is Nothing"</h3>
                         </Col>
                         <Col><ATSpin image={ATPic} size="200px"/></Col>

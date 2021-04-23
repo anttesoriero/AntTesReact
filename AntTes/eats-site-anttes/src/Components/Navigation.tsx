@@ -18,13 +18,13 @@ const Navigation = (prop: {pageName: string}) => {
     return (
         <div className="header">
             <Helmet>
-                <title>Anthony Tesoriero | {prop.pageName}</title>
+                <title>{prop.pageName} | AntTes Eats</title>
             </Helmet>
 
             {isMobile?
                 <div>
                     <Navbar color="dark" dark expand="md"  className="navstyle">
-                    <NavbarBrand href="/" className={'mx-auto brand'} style={{fontSize: 30}}>Anthony Tesoriero</NavbarBrand>
+                    <NavbarBrand href="/" className={'mx-auto brand'} style={{fontSize: 30}}>AntTes Eats</NavbarBrand>
                         <GiHamburgerMenu style={{ color: 'white' }} id="toggler" />
                     </Navbar>
 
@@ -42,7 +42,7 @@ const Navigation = (prop: {pageName: string}) => {
                 </div>
             :
                 <Navbar color="dark" dark expand="md"  className="navstyle">
-                    <NavbarBrand href="/" className={'mx-auto brand'} style={{fontSize: 30}}>Anthony Tesoriero</NavbarBrand>
+                    <NavbarBrand href="/" className={'mx-auto brand'} style={{fontSize: 30}}>AntTes Eats</NavbarBrand>
                     <NavbarToggler onClick={toggleNav} />
                     <Collapse isOpen={isOpen} navbar>
                         <Nav navbar className="mr-auto">
