@@ -1,29 +1,27 @@
-$theme-colors: (
-  "primary": #4281A4,
-  "danger":  #4281A4
-);
+// $theme-colors: (
+//   "primary": #4281A4,
+//   "danger":  #4281A4
+// );
 
 .jumbotron {
     border-radius: 0 !important;
 }
 
 .LandingJumbo {
-    background-color: #4281A4;
-    border-bottom:7px solid #ffcc00;
-    max-height: 350px;
+
+    // Style
+    background-color: black;
+    border-bottom:7px solid #b33500;
 
     h1 {
         color: #fff;
         font-size: 48px;  
-        // font-family: 'Cousine', ;
         font-weight: bold;
     }
 
     h3 {
-        color: #2F4858;
-        /* font-size: 4px; */
-        // font-family: 'Cousine', ;
-        /* font-family: 'Shift', sans-serif; */
+        // color: #2F4858;
+        color: lightgray;
         font-weight: bold;
     }
       
@@ -31,6 +29,30 @@ $theme-colors: (
         font-size: 20px;
         color: #fff;
     }
+}
+
+.LJImgFull {
+    // Image
+    background-image: url("../Images/Udon.jpg");
+    // background-position-x: center;
+    // background-position-y: top -300px;
+    background-position: center center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    height: 450px;
+}
+
+.LJImgNav {
+    // Image
+    background-image: url("../Images/Udon.jpg");
+    // background-position-x: center;
+    // background-position-y: top -300px;
+    background-position: center center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    height: 250px;
 }
 
 .centered {

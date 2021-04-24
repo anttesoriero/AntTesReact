@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, UncontrolledDropdown,
-    DropdownToggle, DropdownMenu, DropdownItem, UncontrolledCollapse, ListGroup, ListGroupItem } from 'reactstrap';
+    DropdownToggle, DropdownMenu, DropdownItem, UncontrolledCollapse, ListGroup, ListGroupItem, NavbarText } from 'reactstrap';
 import { Helmet } from 'react-helmet';
 import { GiHamburgerMenu } from 'react-icons/gi'
 
@@ -11,7 +11,7 @@ const Navigation = (prop: {pageName: string}) => {
     const isMobile = window.innerWidth < 1000;
 
     const navItems = [
-        ["Resume", "./#resume"],
+        ["About", "./about"],
         ["My Links", "./splash"]
     ]
 
@@ -35,8 +35,8 @@ const Navigation = (prop: {pageName: string}) => {
                                 <ListGroupItem tag="a" href={item[1]} className="centered" action><h5 style={{ fontWeight: 'bold' }}>{item[0]}</h5></ListGroupItem>
                             ))}
 
-                            {/* Resume PDF */}
-                            <ListGroupItem tag="a" href="http://anttes.com/AnthonyTesorieroResume.pdf" target="_blank" className="centered" action><h5 style={{ fontWeight: 'bold' }}>Resume PDF</h5></ListGroupItem>
+                            {/* AntTes */}
+                            <ListGroupItem tag="a" href="http://anttes.com" className="centered" action><h5 style={{ fontWeight: 'bold' }}>AntTes</h5></ListGroupItem>
                         </ListGroup>
                     </UncontrolledCollapse>
                 </div>
@@ -47,6 +47,7 @@ const Navigation = (prop: {pageName: string}) => {
                     <Collapse isOpen={isOpen} navbar>
                         <Nav navbar className="mr-auto">
                             {/* Items next to logo*/}
+                            <NavbarText className="navtext">Food Reviews</NavbarText>
                         </Nav>
                         
 
@@ -55,15 +56,14 @@ const Navigation = (prop: {pageName: string}) => {
                             <DropdownToggle nav caret style={{color: 'white', fontWeight: 'bolder'}}>
                                 MENU
                             </DropdownToggle>
-                            {/* Checks if signed in, then conditionally renders different menu */}
                             <DropdownMenu right>
                                     {navItems.map(item => (
                                         <DropdownItem href={item[1]}>{item[0]}</DropdownItem>
                                     ))}
 
-                                    {/* Resume PDF */}
+                                    {/* AntTes */}
                                     <DropdownItem divider />                                    
-                                    <DropdownItem href="http://anttes.com/AnthonyTesorieroResume.pdf" target="_blank">Resume PDF</DropdownItem>
+                                    <DropdownItem href="http://anttes.com">AntTes</DropdownItem>
                                 </DropdownMenu>
                         </UncontrolledDropdown>
                     </Collapse>
