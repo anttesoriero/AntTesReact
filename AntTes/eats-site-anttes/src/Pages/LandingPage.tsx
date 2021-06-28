@@ -28,7 +28,7 @@ const LandingPage = () => {
                 <Container>
                     <Row>
                         <Col>
-                            <h1>Eats</h1>
+                            <h1>AntTes Eats</h1>
                             <h3>"The Secret Ingredient is Nothing"</h3>
                         </Col>
                     </Row>
