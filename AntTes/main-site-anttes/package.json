@@ -15,10 +15,8 @@
     "@types/react-router-dom": "^5.1.6",
     "@types/reactstrap": "^8.5.2",
     "bootstrap": "^4.5.3",
-    "dotenv": "^8.2.0",
     "emailjs-com": "^2.6.4",
     "history": "^5.0.0",
-    "node-sass": "^4.14.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-ga": "^3.3.0",
@@ -26,7 +24,7 @@
     "react-hook-form": "^6.15.4",
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.0",
+    "react-scripts": "^5.0.0",
     "reactstrap": "^8.6.0",
     "typescript": "^4.0.5",
     "web-vitals": "^0.2.4"
@@ -56,6 +54,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-pdf": "^5.0.1"
+    "@types/react-pdf": "^5.0.1",
+    "sass": "^1.49.0"
   }
 }
