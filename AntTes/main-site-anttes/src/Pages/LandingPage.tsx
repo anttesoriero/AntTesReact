@@ -170,8 +170,8 @@ const LandingPage = () => {
 
                 {/* Description */}
                 <h2>
-                    I&#39;m currently a Computer Science major with an Artificial Intelligence concentration
-                    at Rowan University in Glassboro, NJ. #RowanPROUD🦉
+                    I&#39;m currently a Specialist @ Apple, 
+                    and a recent Rowan University Computer Science graduate - #RowanPROUD🦉
                 </h2>
 
                 <br />
