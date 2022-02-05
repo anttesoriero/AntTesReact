@@ -86,6 +86,12 @@ const LandingPage = () => {
     ]
 
     // - Experience
+    const appleSpecialist = {
+        title: "Specialist",
+        itemInfo: "Apple, Tice's Corner, Montvale, NJ",
+        date: "August 2021 - Present"
+    }
+
     const robRes = {
         title: "Robotics Researcher",
         itemInfo: "Department of Computer Science, Rowan University, Glassboro, NJ",
@@ -217,7 +223,20 @@ const LandingPage = () => {
                 {/* Experience */}
                 <h4 id="experience">Experience</h4>
                 <hr />
-                
+
+               {/* Apple Specialist */}
+               <LPExperience experience = {appleSpecialist} labels = {['Sales', 'Organization', 'Leadership', 'Teamwork']} 
+                    expBody = {
+                        <p>
+                            Used extensive product knowledge to ensure quality customer connections, while providing them with a complete solution for their needs. 
+                            Greeted and approached customers with a warm welcome while listening and probing to help understand their situation, 
+                            allowing me to give them the best custom interaction. Assisted the operations team as a full-access runner to ensure product was 
+                            run out to customers and team members in a timely fashion, creating a better customer experience. 
+                            Ensured operation and visual standards were properly and consistently met.
+                        </p>
+                    }
+                />
+
                 {/* Robotics Research */}
                 <LPExperience experience = {robRes} labels = {['Python', 'LEGO EV3 MicroPython', 'LEGO ev3dev']} 
                     expBody = {
