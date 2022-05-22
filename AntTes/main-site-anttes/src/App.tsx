@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
-import LandingPage from './Pages/LandingPage';
-import ErrorPage from './Pages/ErrorPage';
-import Splash from './Pages/Splash';
-import Contact from './Pages/Contact';
-import Oddjobs from './Redirect/Oddjobs';
-import Mitigations from './Redirect/Mitigations';
+import LandingPage from './Pages/LandingPage'
+import ErrorPage from './Pages/ErrorPage'
+import Splash from './Pages/Splash'
+import Contact from './Pages/Contact'
+import Oddjobs from './Redirect/Oddjobs'
+import Mitigations from './Redirect/Mitigations'
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Redirect to="/error" />
       </Switch>
     </BrowserRouter>
-  );
+  )
 }
 
 export default App;
