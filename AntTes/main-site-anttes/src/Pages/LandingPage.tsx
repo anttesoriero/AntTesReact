@@ -41,23 +41,28 @@ const LandingPage = () => {
 
     // - Education Body
     const rowanCourses = [
-        "Object Oriented Programming",
+        "Intro Object Oriented Programming",
+        "Discrete Mathematics",
+        "Object Oriented Programming & Data Abstraction",
         "Foundations of Computer Science",
-        "Lab Techniques",
+        "CS Lab Techniques",
         "Computer Organization",
-        "Data Structures & Design and Analysis of Algorithms",
+        "Data Structures & Algorithms",
+        "Design and Analysis of Algorithms",
         "Linear Algebra",
         "Calculus I, II, III",
-        "Probability & Statistics",
+        "Probability & Random Variables",
+        "Computers & Society - Writing Intensive",
+        "Comcepts in Statistical Data Ananylsis",
         "Programming Languages",
         "Artificial Intelligence",
         "Machine Learning",
-        "Cyber Security",
+        "Cyber Security: Fundamentals, Principles, & Applications",
         "Operating Systems",
-        <a href="#mitigationsRepository" style={{ color: '#393c3d' }}>Software Engineering (Role: Agile Product Owner)</a>,
+        <a href="#mitigationsRepository" style={{ color: '#393c3d' }}>Software Engineering I - Writing Intensive (Role: Agile Product Owner)</a>,
         "Graduate Advanced Robotics",
-        <a href="#oddjobs" style={{ color: '#393c3d' }}>Senior Project - OddJobs</a>,
-        "Databases",
+        <a href="#oddjobs" style={{ color: '#393c3d' }}>CS Senior Project - OddJobs</a>,
+        "Database Systems: Theory & Programming",
         "Human-Computer Interaction"
     ]
 
@@ -75,7 +80,7 @@ const LandingPage = () => {
         "AP Computer Science",
         "Calculus I Honors",
         <a href="https://supa.syr.edu/about-supa/" style={{ color: '#393c3d' }} target="_blank" rel="noreferrer">Forensics Honors with Syracuse University Project Advance</a>,
-        "Algebra II E"
+        "Algebra II Enhanced"
     ]
 
     const rhsActivities = [
@@ -225,31 +230,32 @@ const LandingPage = () => {
                 <hr />
 
                 {/* Apple Specialist */}
-                <LPExperience experience={appleSpecialist} labels={['Sales', 'Organization', 'Leadership', 'Teamwork']}
+                <LPExperience experience={appleSpecialist} labels={['Sales', 'Organization', 'Leadership', 'Teamwork', 'Communication']}
                     expBody={
                         <p>
-                            Used extensive product knowledge to ensure quality customer connections, while providing them with a complete solution for their needs.
-                            Greeted and approached customers with a warm welcome while listening and probing to help understand their situation,
-                            allowing me to give them the best custom interaction. Assisted the operations team as a full-access runner to ensure product was
-                            run out to customers and team members in a timely fashion, creating a better customer experience.
-                            Ensured operation and visual standards were properly and consistently met.
+                            Greeted and probed customers to clearly analyze their situation,
+                            while using extensive product knowledge and problem solving skills to find the optimal solution for their needs.
+                            Connected with and coached teammates to help them exceed expectations,
+                            while properly communicating positive and negative feedback to reinforce learning.
+                            Ensured technology and merchandising standards were met with high attention to detail,
+                            giving the customer a high quality experience while increasing team efficiency.
                         </p>
                     }
                 />
 
                 {/* Robotics Research */}
-                <LPExperience experience={robRes} labels={['Python', 'LEGO EV3 MicroPython', 'LEGO ev3dev']}
+                <LPExperience experience={robRes} labels={['Python', 'LEGO EV3 MicroPython', 'LEGO ev3dev', 'Researching', 'Robotics']}
                     expBody={
                         <p>
-                            Create a script to convert visual based LEGO Scratch code into LEGO MicroPython.
-                            Uses hex code from LEGO Scratch files to identify code blocks. Enhancing use of LEGO and Raspberry Pi robots in learning environments,
-                            and finding a way to be able to use both types interchangeably at low costs to increase enrollment.
+                            Increased efficiency of LEGO EV3 Robots with Python by finding new ways to use infrared sensors and a PixyCam for basic object tracking,
+                            and enhancing object detection. Used sensors with systems such as OpenCV to create better student learning experience.
+                            Began creating automated system to convert visual based LEGO Scratch code into LEGO MicroPython to make lower level learning and debugging simpler
                         </p>
                     }
                 />
 
                 {/* Learning Assistant */}
-                <LPExperience experience={csLA} labels={['Java', 'Python', 'LEGO EV3 MicroPython']}
+                <LPExperience experience={csLA} labels={['Java', 'Python', 'LEGO EV3 MicroPython', 'Leadership', 'Teaching']}
                     expBody={
                         <p>
                             Work closely with computer science students to assist in java and python programming assignments.
@@ -263,9 +269,9 @@ const LandingPage = () => {
                 <LPExperience experience={robAss} labels={['Microsoft Office Suite', 'Google Workspace']}
                     expBody={
                         <p>
+                            Worked with teammate to sort hundreds of parts efficiently, and create database to track necessary part data and information.
                             Build, sort, and organize LEGO robots and parts. Create a new, better structured organization style for
-                            future departmental additions. Work with teammate to create a database to track robot information, part amounts,
-                            and keep equipment properly organized and easily accessible.
+                            future departmental additions.
                         </p>
                     }
                 />
@@ -276,13 +282,15 @@ const LandingPage = () => {
                 <hr />
 
                 {/* OddJobs */}
-                <LPProject project={oddJobs} labels={['HTML', 'CSS', 'React.js', 'TypeScript', 'Python', 'Flask', 'MySQL', 'AWS']} id="oddjobs"
+                <LPProject project={oddJobs} labels={['React.js', 'HTML', 'CSS', 'TypeScript', 'Python', 'Flask', 'MySQL', 'AWS']} id="oddjobs"
                     projBody={
                         <div>
                             <p>
-                                Web app built using React.js HTML, CSS, TypeScript on the frontend, Python, Flask, MySQL on the backend.
-                                A service that connects people who need helps with tasks withy people who are interesting in earning extra income.
-                                Uses surveys to learn the user and collect useful data, to recommend tasks to list/complete, based on what they like.
+                                Web app built by a team of seven using React, HTML, CSS, and TypeScript on the frontend, and Python, Flask, MySQL, and AWS EC2 on the backend.
+                                Created initial mockup designs to increase production efficiency later. Developed React frontend using multiple APIs and components,
+                                such as Google OAuth for user authentication, and react-leaflet for location services.
+                                Connects people who need help with tasks to people who are interested in earning cash by allowing users to securely find relevant jobs near them,
+                                and filter based on criteria. Collects survey data to learn and recommend tasks to list/complete based on interests
                             </p>
                             <p>* NOTE - OddJobs GitHub Repository is <u>private</u> due to API keys *</p>
 
@@ -296,12 +304,12 @@ const LandingPage = () => {
                 />
 
                 {/* Mitigation's Repository */}
-                <LPProject project={mitRep} labels={['HTML', 'CSS', 'AJAX', 'PHP', 'SQL', 'Ubuntu', 'MySQL', 'AWS']} id="mitigationsRepository"
+                <LPProject project={mitRep} labels={['HTML', 'CSS', 'AJAX', 'PHP', 'SQL', 'Ubuntu', 'MySQL', 'AWS', 'Agile']} id="mitigationsRepository"
                     projBody={
                         <p>
-                            Working repository to identify and track threats and risks from user input of security controls.
-                            Built using AJAX, HTML, and CSS on the frontend, SQL and ubuntu on an Amazon Web Server on the backend.
-                            After threats are calculated, they are forked from the mitigation, and able to be seen by users on the website, similar to a GitHub for mitigations.
+                            Communicated, as Product Owner, with client from Lockheed Martin through email and bi-weekly sprint review to effectively present our team goals and achievements.
+                            Worked with team of six to create a repository that identifies threats and risks from user input security controls; threats are then tracked and forked from the mitigation,
+                            similar to GitHub Frontend design with AJAX, HTML, and CSS, and backend with SQL and ubuntu on AWS
                         </p>
                     }
                 />
