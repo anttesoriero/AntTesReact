@@ -6,6 +6,7 @@ import Splash from './Pages/Splash'
 import Contact from './Pages/Contact'
 import Oddjobs from './Redirect/Oddjobs'
 import Mitigations from './Redirect/Mitigations'
+import Test from './Pages/Test'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact={true} path="/contact" render={(props) => <Contact />} />
         <Route exact={true} path="/oddjobs" render={(props) => <Oddjobs />} />
         <Route exact={true} path="/mitigations" render={(props) => <Mitigations />} />
+        <Route exact={true} path="/test" render={(props) => <Test />} />
         <Redirect to="/error" />
       </Switch>
     </BrowserRouter>
