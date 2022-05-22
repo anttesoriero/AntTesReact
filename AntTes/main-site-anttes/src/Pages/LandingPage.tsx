@@ -10,6 +10,7 @@ import { AiFillGithub, AiFillYoutube, AiFillLinkedin, AiFillFileText } from 'rea
 import LPEducation from '../Components/LandingPageComps/LPEducation';
 import LPExperience from '../Components/LandingPageComps/LPExperience';
 import LPProject from '../Components/LandingPageComps/LPProject';
+import ATHeader from '../Components/ATHeader';
 
 const LandingPage = () => {
 
@@ -143,31 +144,7 @@ const LandingPage = () => {
     return (
         <div className="App">
             <Navigation pageName="Home" />
-            {isMobile
-                ?
-                <Jumbotron className="LandingJumbo">
-                    <Container>
-                        <Row>
-                            <Col><h1>Hi, I'm Anthony</h1></Col>
-                            <Col><ATSpin image={ATPic} size="85px" /></Col>
-                        </Row>
-                        <h3>"The Secret Ingredient is Nothing"</h3>
-                        <br />
-                    </Container>
-                </Jumbotron>
-                :
-                <Jumbotron className="LandingJumbo">
-                    <Container>
-                        <Row>
-                            <Col>
-                                <h1>Hi, I'm Anthony</h1>
-                                <h3>"The Secret Ingredient is Nothing"</h3>
-                            </Col>
-                            <Col><ATSpin image={ATPic} size="200px" /></Col>
-                        </Row>
-                    </Container>
-                </Jumbotron>
-            }
+            <ATHeader tagLine='"The Secret Ingredient is Nothing"' />
 
             <Container>
                 {/* AT Tab */}
