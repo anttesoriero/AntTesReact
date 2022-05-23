@@ -6,7 +6,7 @@ import ATSpin from '../Components/ATSpin';
 import ATPic from '../Styles/Images/AnthonyTesoriero.png';
 import { AiFillLinkedin, AiFillGithub, AiFillTwitterSquare, AiFillMail, AiFillFacebook, AiFillInstagram, AiFillFilePdf } from "react-icons/ai";
 import { SiCashapp, SiSnapchat } from "react-icons/si";
-import { FaMoneyBillWave, FaPaypal } from "react-icons/fa";
+import { FaMoneyBillWave, FaPaypal, FaAngellist } from "react-icons/fa";
 import { IoGlobeOutline, IoLogoVenmo, IoShareSocialSharp } from "react-icons/io5";
 import ATHeader from '../Components/ATHeader';
 
@@ -18,6 +18,7 @@ const Splash = () => {
     const mlLinks = {
         AntTes: ["AntTes.com", "http://anttes.com", <IoGlobeOutline size={iconSize} className="splashIconStyle" />],
         LinkedIn: ["LinkedIn", "https://linkedin.com/in/anttesoriero", <AiFillLinkedin size={iconSize} className="splashIconStyle" />],
+        AngelList: ["AngelList", "https://angel.co/u/anttesoriero", <FaAngellist size={iconSize} className="splashIconStyle" />],
         GitHub: ["GitHub", "https://github.com/anttesoriero", <AiFillGithub size={iconSize} className="splashIconStyle" />],
         Twitter: ["Twitter", "https://twitter.com/anttesoriero", <AiFillTwitterSquare size={iconSize} className="splashIconStyle" />],
         Snapchat: ["Snapchat", "https://www.snapchat.com/add/anttesoriero", <SiSnapchat size={iconSize} className="splashIconStyle" />],
@@ -25,17 +26,6 @@ const Splash = () => {
         Facebook: ["Facebook", "https://facebook.com/anttesoriero", <AiFillFacebook size={iconSize} className="splashIconStyle" />],
         Resume: ["Resume", "http://anttes.com/AnthonyTesorieroResume.pdf", <AiFillFilePdf size={iconSize} className="splashIconStyle" />],
         Contact: ["Contact", "mailto:anttesoriero@gmail.com", <AiFillMail size={iconSize} className="splashIconStyle" />]
-    }
-
-    const sjLinks = {
-        BLMDoc: ["#BLM Google Doc", "https://docs.google.com/document/d/1-0KC83vYfVQ-2freQveH43PWxuab2uWDEGolzrNoIks/mobilebasic"],
-        BLMCarrd: ["#BLM Carrd", "https://blacklivesmatters.carrd.co/"],
-        SAHCarrd: ["Stop Asian Hate Carrd", "https://stopasianhate.carrd.co/"],
-        StopAAPIHate: ["Stop AAPI Hate", "https://stopaapihate.org/"],
-        ACLU: ["ACLU", "https://www.aclu.org/"],
-        NAACP: ["NAACP", "https://naacp.org/"],
-        NAACPLDF: ["NAACP LDF", "https://www.naacpldf.org/"],
-        BLM: ["Black Lives Matter", "https://blacklivesmatter.com/"]
     }
 
     return (
