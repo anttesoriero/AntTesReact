@@ -1,11 +1,9 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { Container, Jumbotron, Row, Col, Button, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledButtonDropdown, ButtonGroup } from 'reactstrap';
+import { Container, Row, Col, Button, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledButtonDropdown, ButtonGroup } from 'reactstrap';
 import Navigation from '../Components/Navigation';
 import Footer from '../Components/Footer';
-import ATSpin from '../Components/ATSpin';
 import ButtonLabels from '../Components/ButtonLabels';
-import ATPic from '../Styles/Images/AnthonyTesoriero.png';
 import { AiFillGithub, AiFillYoutube, AiFillLinkedin, AiFillFileText } from 'react-icons/ai';
 import LPEducation from '../Components/LandingPageComps/LPEducation';
 import LPExperience from '../Components/LandingPageComps/LPExperience';

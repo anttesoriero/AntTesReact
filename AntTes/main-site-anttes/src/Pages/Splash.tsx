@@ -1,10 +1,8 @@
 import React from 'react';
 import Navigation from '../Components/Navigation';
-import { Container, Row, Col, Button, Jumbotron, UncontrolledCollapse } from 'reactstrap';
+import { Container, Button, UncontrolledCollapse } from 'reactstrap';
 import Footer from '../Components/Footer';
-import ATSpin from '../Components/ATSpin';
-import ATPic from '../Styles/Images/AnthonyTesoriero.png';
-import { AiFillLinkedin, AiFillGithub, AiFillTwitterSquare, AiFillMail, AiFillFacebook, AiFillInstagram, AiFillFilePdf } from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub, AiFillTwitterSquare, AiFillMail, AiFillFacebook, AiFillInstagram, AiFillFilePdf, AiFillIdcard } from "react-icons/ai";
 import { SiCashapp, SiSnapchat } from "react-icons/si";
 import { FaMoneyBillWave, FaPaypal, FaAngellist } from "react-icons/fa";
 import { IoGlobeOutline, IoLogoVenmo, IoShareSocialSharp } from "react-icons/io5";
@@ -13,7 +11,7 @@ import ATHeader from '../Components/ATHeader';
 const Splash = () => {
 
     const iconSize = "50px"
-    const isMobile = window.innerWidth < 1000;
+    // const isMobile = window.innerWidth < 1000;
 
     const mlLinks = {
         AntTes: ["AntTes.com", "http://anttes.com", <IoGlobeOutline size={iconSize} className="splashIconStyle" />],
@@ -25,7 +23,8 @@ const Splash = () => {
         Instagram: ["Instagram", "https://instagram.com/anttesoriero", <AiFillInstagram size={iconSize} className="splashIconStyle" />],
         Facebook: ["Facebook", "https://facebook.com/anttesoriero", <AiFillFacebook size={iconSize} className="splashIconStyle" />],
         Resume: ["Resume", "http://anttes.com/AnthonyTesorieroResume.pdf", <AiFillFilePdf size={iconSize} className="splashIconStyle" />],
-        Contact: ["Contact", "mailto:anttesoriero@gmail.com", <AiFillMail size={iconSize} className="splashIconStyle" />]
+        Contact: ["Contact", "mailto:anttesoriero@gmail.com", <AiFillMail size={iconSize} className="splashIconStyle" />],
+        Card: ["Business Card", "https://anttes.com/card", <AiFillIdcard size={iconSize} className="splashIconStyle" />]
     }
 
     return (

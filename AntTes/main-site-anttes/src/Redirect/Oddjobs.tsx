@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+// import React, { useEffect } from 'react';
 import Navigation from '../Components/Navigation';
-import {Button, Col, Container, Row} from 'reactstrap';
+import { Button, Col, Container, Row } from 'reactstrap';
 import Footer from '../Components/Footer';
 
 const Oddjobs = () => {
@@ -11,10 +12,10 @@ const Oddjobs = () => {
 
     return (
         <div>
-            <Navigation pageName="Oddjobs"/>
+            <Navigation pageName="Oddjobs" />
 
             <Container>
-                
+
                 {/* <h1 className="centered"><a href="http://oddjobsproject.com:5000/">CLICK HERE if not automatically redirected.</a></h1> */}
                 <br />
                 <h1 className="centered">OddJobs - No Job is too Odd</h1>
@@ -25,13 +26,13 @@ const Oddjobs = () => {
                 </div>
                 <br />
                 <div className="centered">
-                    <iframe 
-                        width="560" 
-                        height="315" 
-                        src="https://www.youtube.com/embed/bv3de-OYx8I" 
-                        title="OddJobs - YouTube video player" 
-                        frameBorder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/bv3de-OYx8I"
+                        title="OddJobs - YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen>
                     </iframe>
                 </div>
@@ -40,9 +41,9 @@ const Oddjobs = () => {
 
                 <h2>About</h2>
                 <p>
-                    Odd Jobs is a service that will connect people who need help with small tasks (odd-jobs) with motivated people interested in an extra income! 
-                    We intend for users to post requests for help with odd jobs such as moving a couch, picking up groceries, mowing the lawn, etc. 
-                    Other users with free-time can negotiate the terms on filling the request. 
+                    Odd Jobs is a service that will connect people who need help with small tasks (odd-jobs) with motivated people interested in an extra income!
+                    We intend for users to post requests for help with odd jobs such as moving a couch, picking up groceries, mowing the lawn, etc.
+                    Other users with free-time can negotiate the terms on filling the request.
                     We will have users regularly complete surveys to better understand their preferences and optimize their experience.
                 </p>
 
@@ -100,7 +101,7 @@ const Oddjobs = () => {
 
             </Container>
             <br />
-            <Footer/>
+            <Footer />
         </div>
     );
 }
