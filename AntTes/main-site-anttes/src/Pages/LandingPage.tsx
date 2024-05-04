@@ -4,7 +4,7 @@ import { Container, Row, Col, Button, DropdownItem, DropdownMenu, DropdownToggle
 import Navigation from '../Components/Navigation';
 import Footer from '../Components/Footer';
 import ButtonLabels from '../Components/ButtonLabels';
-import { AiFillGithub, AiFillYoutube, AiFillLinkedin, AiFillFileText } from 'react-icons/ai';
+import { AiFillGithub, AiFillYoutube, AiFillLinkedin, AiFillFileText, AiOutlineLink } from 'react-icons/ai';
 import LPEducation from '../Components/LandingPageComps/LPEducation';
 import LPExperience from '../Components/LandingPageComps/LPExperience';
 import LPProject from '../Components/LandingPageComps/LPProject';
@@ -16,9 +16,9 @@ const LandingPage = () => {
 
     // -- Lists -- 
     const expertList = ['Java', 'Python', 'HTML', 'CSS']
-    const proficientList = ['React.js', 'JavaScript', 'Git', 'TypeScript']
-    const familiarList = ['MySQL', 'PHP', 'Swift', 'C', 'Ada', 'Scheme', 'Prolog']
-    const toolsList = ['Eclipse', 'VSCode', 'IntelliJ', 'PyCharm', 'PHPStorm', 'WebStorm', 'Xcode']
+    const proficientList = ['Swift', 'React.js', 'JavaScript', 'Git', 'TypeScript']
+    const familiarList = ['MySQL', 'PHP', 'XCTest', 'C', 'Ada', 'Scheme', 'Prolog']
+    const toolsList = ['Eclipse', 'VSCode', 'XCode', 'IntelliJ', 'PyCharm', 'PHPStorm', 'WebStorm']
     const osList = ['MacOS', 'Windows', 'Unix', 'Linux']
 
     // -- Lists for consistent data 
@@ -90,6 +90,12 @@ const LandingPage = () => {
     ]
 
     // - Experience
+    const appleSQA_CE = {
+        title: "Software QA and Automation Engineer (CE)",
+        itemInfo: "Apple, Remote",
+        date: "January 2023 - June 2023"
+    }
+
     const appleSpecialist = {
         title: "Specialist",
         itemInfo: "Apple, Tice's Corner, Montvale, NJ",
@@ -150,8 +156,8 @@ const LandingPage = () => {
 
                 {/* Description */}
                 <h2>
-                    I&#39;m currently a Specialist @ Apple,
-                    and a recent Rowan University Computer Science graduate - #RowanPROUD🦉
+                    Specialist @ Apple, Previous Software QA Engineer (CE) @ Apple,
+                    Rowan University Computer Science graduate - #RowanPROUD🦉
                 </h2>
 
                 <br />
@@ -203,6 +209,28 @@ const LandingPage = () => {
                 {/* Experience */}
                 <h4 id="experience">Experience</h4>
                 <hr />
+
+                {/* Apple Software QA Engineer */}
+                <LPExperience experience={appleSQA_CE} labels={['Swift', 'XCTest', 'Regression Testing', 'Feature Shipment', 'Communication']}
+                    expBody={
+                        <div>
+                            <p>
+                                Coded and contributed clean, well-documented automated testing code, covering both macOS and iOS testing.
+                                Responsible for all macOS Swift Automated testing, done with XCTest, Swift, and multiple internal libraries and frameworks.
+                                Also performed manual UI regression testing when needed on all platforms, including internal APIs and SDKs.
+                                Shipped public iOS feature, acting as the DRI for Software QA. Created a test suite with 25 detailed test cases, establishing
+                                maintainability for future manual and automated testing. Reported status weekly to all involved teams and stakeholders.
+                                Learned Swift programming language in 2 weeks to begin urgent software
+                                automation development at production level.
+                            </p>
+                            <div className="itemTime" style={{ width: 200 }}>
+                                <Button className="centered" color="primary" href="https://www.macrumors.com/2023/06/07/app-store-download-time-remaining-ios-17/" target="_blank">
+                                    <AiOutlineLink className="iconStyle" size="30px" /> Shipped Feature
+                                </Button>
+                            </div>
+                        </div>
+                    }
+                />
 
                 {/* Apple Specialist */}
                 <LPExperience experience={appleSpecialist} labels={['Sales', 'Organization', 'Leadership', 'Teamwork', 'Communication']}
