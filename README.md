@@ -1,6 +1,7 @@
 # AntTes.com
 ### Now made with React! ⚛
 This is the GitHub Repository for Anthony Tesoriero's personal website
+#### Looking for how it's hosted on GitHub? [Click here](https://github.com/anttesoriero/anttesoriero.github.io)
 
 Previously, my website was done fully by hand using HTML and CSS, with just a little PHP and some JS for testing.
 As of 2021, this website has been fully remade using ReactJS, to make it much easier to maintain. 
